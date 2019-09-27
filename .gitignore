@@ -1,2 +1,5 @@
 .cpcache/
 .nrepl-port
+cljdoc-analyzer/
+cljdoc/
+rewrite-cljs-playground/
