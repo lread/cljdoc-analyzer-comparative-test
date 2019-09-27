@@ -1,0 +1,572 @@
+found results/old/analysis-out/cljdoc-edn/semantic-csv/semantic-csv/0.2.1-alpha1/cljdoc.edn
+found results/new/analysis-out/cljdoc-edn/semantic-csv/semantic-csv/0.2.1-alpha1/cljdoc.edn
+[1;31m{[0m[1;33m:analysis[0m [1;31m{[0m[1;35m"clj"[0m [1;31m[[0m[1;31m{[0m[1;33m:name[0m semantic-csv.casters,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to boolean from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                               :line[0m [36m104[0m,
+[1;33m                               :name[0m ->boolean,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to double from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                               :line[0m [36m88[0m,
+[1;33m                               :name[0m ->double,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to float from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                               :line[0m [36m71[0m,
+[1;33m                               :name[0m ->float,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes a string, replacing consecutive underscores and spaces with a single dash(-),\nthen returns a keyword based on the transformed string."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                               :line[0m [36m11[0m,
+[1;33m                               :name[0m ->idiomatic-keyword,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to int from string or other numeric. If string represents a non integer value,\nit will be rounded down to the nearest int.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                               :line[0m [36m31[0m,
+[1;33m                               :name[0m ->int,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to long from string or other numeric. If string represents a non integer value,\nwill be rounded down to the nearest long.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                               :line[0m [36m51[0m,
+[1;33m                               :name[0m ->long,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:doc[0m [1;35m"# Core API namespace\n"[0m,
+[1;33m                    :name[0m semantic-csv.core,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to boolean from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m324[0m,
+[1;33m                               :name[0m ->boolean,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to double from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m325[0m,
+[1;33m                               :name[0m ->double,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to float from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m326[0m,
+[1;33m                               :name[0m ->float,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes a string, replacing consecutive underscores and spaces with a single dash(-),\nthen returns a keyword based on the transformed string."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m323[0m,
+[1;33m                               :name[0m ->idiomatic-keyword,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to int from string or other numeric. If string represents a non integer value,\nit will be rounded down to the nearest int.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m328[0m,
+[1;33m                               :name[0m ->int,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to long from string or other numeric. If string represents a non integer value,\nwill be rounded down to the nearest long.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m327[0m,
+[1;33m                               :name[0m ->long,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mn rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes sequence of items and returns a sequence of batches of items from the original\nsequence, at most `n` long."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m422[0m,
+[1;33m                               :name[0m batch,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns rows[1;31m][0m [1;31m[[0mcast-fns opts rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Casts the vals of each row according to `cast-fns`, which must either be a map of\n`column-name -> casting-fn` or a single casting function to be applied towards all columns.\nAdditionally, an `opts` map can be used to specify:\n\n* `:except-first` - Leaves the first row unaltered; useful for preserving header row.\n* `:exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m148[0m,
+[1;33m                               :name[0m cast-with,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& forms-and-data[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes any number of forms and a final `data` argument. Threads the data through the forms, as though\nwith `->>`, except that the first item in `data` remains unaltered. This is intended to operate within\nthe context of an _actual_ `->>` threading macro for processing, where you might want to leave a header\ncolumn unmodified by your processing functions."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m206[0m,
+[1;33m                               :name[0m except-first,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrows[1;31m][0m
+[1;31m                                          [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                            :keys[0m [1;31m[[0mkeyify transform-header header structs[1;31m][0m,
+[1;33m                                            :or[0m [1;31m{[0mkeyify [1;36mtrue[0m[1;31m}[0m[1;31m}[0m
+                                           rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes a sequence of row vectors, as commonly produced by csv parsing libraries, and returns a sequence of\nmaps. By default, the first row vector will be interpreted as a header, and used as the keys for the maps.\nHowever, this and other behaviour are customizable via an optional `opts` map with the following options:\n\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n  If `:transform-header` is present, this option will be ignored.\n* `:transform-header` - A function that transforms the header/column names for each column.\n  This takes precedence over `keyify` and should be a function that takes a string.\n* `:header` - specify the header to use for map keys, preventing first row of data from being consumed as header.\n* `:structs` - bool; use structs instead of hash-maps or array-maps, for performance boost (default: `false`)."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m69[0m,
+[1;33m                               :name[0m mappify,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcsv-readable
+                                           &
+[1;31m                                           {[0m[1;33m:as[0m opts, [1;33m:keys[0m [1;31m[[0mparser-opts[1;31m][0m, [1;33m:or[0m [1;31m{[0mparser-opts [1;31m{[0m[1;31m}[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"This is a convenience function for reading a csv file using `clojure/data.csv` and passing it through `process`\nwith the given set of options (specified _last_ as kw_args, in contrast with our other processing functions).\nNote that `:parser-opts` can be specified and will be passed along to `clojure-csv/parse-csv`"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m277[0m,
+[1;33m                               :name[0m parse-and-process,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mopts rows[1;31m][0m [1;31m[[0mrows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"This function wraps together the most frequently used input processing capabilities,\ncontrolled by an `opts` hash with opinionated defaults:\n\n* `:mappify` - bool; transform rows from vectors into maps using `mappify`.\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:header` - specify header to be used in mappify; as per `mappify`, first row will not be consumed as header\n* `:structs` - bool; use structs instead of array-maps or hash-maps in mappify.\n* `:remove-comments` - bool; remove comment lines, as specified by `:comment-re` or `:comment-char`. Also\n   removes empty lines. Defaults to `true`.\n* `:comment-re` - specify a regular expression to use for commenting out lines.\n* `:comment-char` - specify a comment character to use for filtering out comments; overrides comment-re.\n* `:cast-fns` - optional map of `colname | index -> cast-fn`; row maps will have the values as output by the\n   assigned `cast-fn`.\n* `:cast-exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:cast-only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m242[0m,
+[1;33m                               :name[0m process,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrows[1;31m][0m [1;31m[[0mopts rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Removes rows which start with a comment character (by default, `#`). Operates by checking whether\nthe first item of every row in the collection matches a comment pattern. Also removes empty lines.\nOptions include:\n\n* `:comment-re` - Specify a custom regular expression for determining which lines are commented out.\n* `:comment-char` - Checks for lines lines starting with this char.\n\nNote: this function only works with rows that are vectors, and so should always be used before mappify."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m111[0m,
+[1;33m                               :name[0m remove-comments,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcsv-filename & [1;31m{[0m[1;33m:as[0m opts[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"This convenience function let's you `parse-and-process` csv data given a csv filename. Note that it is _not_\nlazy, and must read in all data so the file handle can be closed."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m298[0m,
+[1;33m                               :name[0m slurp-csv,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfile rows[1;31m][0m [1;31m[[0mfile opts rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Convenience function for spitting out CSV data to a file using `clojure-csv`.\n\n* `file` - Can be either a filename string, or a file handle.\n* `opts` - Optional hash of settings.\n* `rows` - Can be a sequence of either maps or vectors; if the former, vectorize will be\n    called on the input with `:header` argument specifiable through `opts`.\n\nThe Options hash can have the following mappings:\n\n* `:batch-size` - How many rows to format and write at a time?\n* `:cast-fns` - Formatter(s) to be run on row values. As with `cast-with` function, can be either a map\n   of `column-name -> cast-fn`, or a single function to be applied to all values. Note that `str` is called\n   on all values just before writing regardless of `:cast-fns`.\n* `:writer-opts` - Options hash to be passed along to `clojure-csv.core/write-csv`.\n* `:header` - Header to be passed along to `vectorize`, if necessary.\n* `:prepend-header` - Should the header be prepended to the rows written if `vectorize` is called?"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m445[0m,
+[1;33m                               :name[0m spit-csv,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrows[1;31m][0m [1;31m[[0mopts rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Take a sequence of maps, and transform them into a sequence of vectors. Options:\n\n* `:header` - The header to be used. If not specified, this defaults to `(-> rows first keys)`. Only\n  values corresponding to the specified header will be included in the output, and will be included in the\n  order corresponding to this argument.\n* `:prepend-header` - Defaults to true, and controls whether the `:header` vector should be prepended\n  to the output sequence.\n* `:format-header` - If specified, this function will be called on each element of the `:header` vector, and\n  the result prepended to the output sequence. The default behaviour is to leave strings alone but stringify\n  keyword names such that the `:` is removed from their string representation. Passing a falsey value will\n  leave the header unaltered in the output."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                               :line[0m [36m375[0m,
+[1;33m                               :name[0m vectorize,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:doc[0m [1;35m"This namespace consists of implementation details for the main API\n"[0m,
+[1;33m                    :name[0m semantic-csv.impl.core,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mdo-it? & args[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Conditional double-arrow operation (->> nums (?>> inc-all? (map inc)))\n"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m123[0m,
+[1;33m                               :name[0m ?>>,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mf & args[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Utility that takes a function f, any number of regular args, and a final kw-args argument which will be\nsplatted in as a final argument"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m13[0m,
+[1;33m                               :name[0m apply-kwargs,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns row & [1;31m{[0m[1;33m:keys[0m [1;31m[[0monly exception-handler[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Format the values of row with the given function. This gives us some flexbility with respect to formatting\nboth vectors and maps in similar fashion."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m46[0m,
+[1;33m                               :name[0m cast-row,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfsym[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Clone the var pointed to by fsym into current ns such that arglists, name and doc metadata are preserned.\n"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m79[0m,
+[1;33m                               :name[0m clone-var,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mheader row[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translates a single row of values into a map of `colname -> val`, given colnames in `header`.\n"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m7[0m,
+[1;33m                               :name[0m mappify-row,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Check if value is a non-blank string.\n"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m68[0m,
+[1;33m                               :name[0m not-blank?,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns exception-handler[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a function that casts casts a single row value based on specified casting function and\noptionally excpetion handler"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m34[0m,
+[1;33m                               :name[0m row-val-caster,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Leaves strings alone. Turns keywords into the stringified version of the keyword, sans the initial `:`\ncharacter. On anything else, calls str."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                               :line[0m [36m24[0m,
+[1;33m                               :name[0m stringify-keyword,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:doc[0m [1;35m"# Transducers API namespace\n"[0m,
+[1;33m                    :name[0m semantic-csv.transducers,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to boolean from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m308[0m,
+[1;33m                               :name[0m ->boolean,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to double from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m309[0m,
+[1;33m                               :name[0m ->double,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to float from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m310[0m,
+[1;33m                               :name[0m ->float,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes a string, replacing consecutive underscores and spaces with a single dash(-),\nthen returns a keyword based on the transformed string."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m307[0m,
+[1;33m                               :name[0m ->idiomatic-keyword,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to int from string or other numeric. If string represents a non integer value,\nit will be rounded down to the nearest int.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m312[0m,
+[1;33m                               :name[0m ->int,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Translate to long from string or other numeric. If string represents a non integer value,\nwill be rounded down to the nearest long.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m311[0m,
+[1;33m                               :name[0m ->long,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mn[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a transducer that will return a sequence of row batches, where the batch\nsize is n."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m420[0m,
+[1;33m                               :name[0m batch,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns[1;31m][0m
+[1;31m                                          [[0mcast-fns
+[1;31m                                           {[0m[1;33m:as[0m opts, [1;33m:keys[0m [1;31m[[0mexcept-first exception-handler only[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a transducer that casts the vals of each row according to `cast-fns`, which must either\nbe a map of `column-name -> casting-fn` or a single casting function to be applied towards all columns.\nOptions include:\n\n* `:except-first` - Leaves the first row unaltered; useful for preserving header row.\n* `:exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m145[0m,
+[1;33m                               :name[0m cast-with,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m
+[1;31m                                          [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                            :keys[0m [1;31m[[0mkeyify transform-header header[1;31m][0m,
+[1;33m                                            :or[0m [1;31m{[0mkeyify [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a transducer that transforms row vectors into maps, where keys are taken as the first row or as\nspecified via `:header` option.  Options include:\n\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:header` - specify the header to use for map keys, preventing first row of data from being consumed as header.\n* `:transform-header` - specify a transformation function for each header key (ignored if `:header` or `:keyify` is specified)."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m21[0m,
+[1;33m                               :name[0m mappify,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcsv-readable
+                                           &
+[1;31m                                           {[0m[1;33m:as[0m opts, [1;33m:keys[0m [1;31m[[0mparser-opts[1;31m][0m, [1;33m:or[0m [1;31m{[0mparser-opts [1;31m{[0m[1;31m}[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"This is a convenience function for reading a csv file using `clojure-csv` and passing it through `process`\nwith the given set of options (specified _last_ as kw args, in contrast with our other processing functions).\nNote that `:parser-opts` can be specified and will be passed along to `clojure-csv/parse-csv`"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m257[0m,
+[1;33m                               :name[0m parse-and-process,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m[[0m[1;31m[][0m
+[1;31m                                          [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                            :keys[0m [1;31m[[0mmappify
+                                                   keyify
+                                                   header
+                                                   transform-header
+                                                   remove-comments
+                                                   comment-re
+                                                   comment-char
+                                                   structs
+                                                   cast-fns
+                                                   cast-exception-handler
+                                                   cast-only[1;31m][0m,
+[1;33m                                            :or[0m [1;31m{[0mcomment-re [30;41m-#"^\#"[0m [30;42m+#"^\#"[0m,
+                                                 keyify [1;36mtrue[0m,
+                                                 mappify [1;36mtrue[0m,
+                                                 remove-comments [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m][0m,
+[1;33m                               :doc[0m [1;35m"Returns a transducers that composes the most frequently used input processing capabilities,\nand is controlled by an `opts` hash with opinionated defaults:\n\n* `:mappify` - bool; transform rows from vectors into maps using `mappify`.\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:transform-header` - specify a transformation function for each header key (ignored if `:header` or `:keyify` is specified).\n* `:header` - specify header to be used in mappify; as per `mappify`, first row will not be consumed as header\n* `:structs` - bool; use structify insead of mappify\n* `:remove-comments` - bool; remove comment lines, as specified by `:comment-re` or `:comment-char`. Also\n   removes empty lines. Defaults to `true`.\n* `:comment-re` - specify a regular expression to use for commenting out lines.\n* `:comment-char` - specify a comment character to use for filtering out comments; overrides comment-re.\n* `:cast-fns` - optional map of `colname | index -> cast-fn`; row maps will have the values as output by the\n   assigned `cast-fn`.\n* `:cast-exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:cast-only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m209[0m,
+[1;33m                               :name[0m process,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0m[1;31m{[0m[1;33m:as[0m opts, [1;33m:keys[0m [1;31m[[0mcomment-re comment-char[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a transducer that removes rows starting with a comment character (by default, `#`).\nOperates by checking whether the first item of every row in the collection matches a comment pattern.\nAlso removes empty lines. Options include:\n\n* `:comment-re` - Specify a custom regular expression for determining which lines are commented out.\n* `:comment-char` - Checks for lines lines starting with this char.\n\nNote: this function only works (or makes sense) with rows that are vectors, and so should always be used\nbefore mappify."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m107[0m,
+[1;33m                               :name[0m remove-comments,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcsv-filename & [1;31m{[0m[1;33m:as[0m opts[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"This convenience function let's you `parse-and-process` csv data given a csv filename. Note that it is _not_\nlazy, and must read in all data so the file handle can be closed."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m282[0m,
+[1;33m                               :name[0m slurp-csv,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfile rows[1;31m][0m
+[1;31m                                          [[0mfile
+[1;31m                                           {[0m[1;33m:as[0m opts,
+[1;33m                                            :keys[0m [1;31m[[0mbatch-size
+                                                   cast-fns
+                                                   writer-opts
+                                                   header
+                                                   prepend-header[1;31m][0m,
+[1;33m                                            :or[0m [1;31m{[0mbatch-size [36m20[0m, prepend-header [1;36mtrue[0m[1;31m}[0m[1;31m}[0m
+                                           rows[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Convenience function for spitting out CSV data to a file using `clojure-csv`.\n\n* `file` - Can be either a filename string, or a file handle.\n* `opts` - Optional hash of settings.\n* `rows` - Can be a sequence of either maps or vectors; if the former, vectorize will be\n    called on the input with `:header` argument specifiable through `opts`.\n\nThe Options hash can have the following mappings:\n\n* `:batch-size` - How many rows to format and write at a time?\n* `:cast-fns` - Formatter(s) to be run on row values. As with `cast-with` function, can be either a map\n   of `column-name -> cast-fn`, or a single function to be applied to all values. Note that `str` is called\n   on all values just before writing regardless of `:cast-fns`.\n* `:writer-opts` - Options hash to be passed along to `clojure-csv.core/write-csv`.\n* `:header` - Header to be passed along to `vectorize`, if necessary.\n* `:prepend-header` - Should the header be prepended to the rows written if `vectorize` is called?"[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m444[0m,
+[1;33m                               :name[0m spit-csv,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m
+[1;31m                                          [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                            :keys[0m [1;31m[[0mkeyify transform-header header[1;31m][0m,
+[1;33m                                            :or[0m [1;31m{[0mkeyify [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes an optional map of input options and returns a transducer.  The transducer transforms row vectors into structs,\nwhere keys are taken as the first row or as specified via `:header` option.  This is analogous to mappify.  Options:\n\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:header` - specify the header to use for map keys, preventing first row of data from being consumed as header.\n* `:transform-header` - specify a transformation function for each header key (ignored if `:header` or `:keyify` is specified)."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m65[0m,
+[1;33m                               :name[0m structify,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m
+[1;31m                                          [[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mheader prepend-header format-header[1;31m][0m,
+[1;33m                                            :or[0m [1;31m{[0mformat-header impl/stringify-keyword,
+                                                 prepend-header [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a transducer that transforms maps into vectors. Options include:\n\n* `:header` - The header to be used. If not specified, this defaults to `(-> rows first keys)`. Only\n  values corresponding to the specified header will be included in the output, and will be included in the\n  order corresponding to this argument.\n* `:prepend-header` - Defaults to true, and controls whether the `:header` vector should be prepended\n  to the output sequence.\n* `:format-header` - If specified, this function will be called on each element of the `:header` vector, and\n  the result prepended to the output sequence. The default behaviour is to leave strings alone but stringify\n  keyword names such that the `:` is removed from their string representation. Passing a falsey value will\n  leave the header unaltered in the output."[0m,
+[1;33m                               :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                               :line[0m [36m361[0m,
+[1;33m                               :name[0m vectorize,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m[1;31m][0m,
+[1;35m            "cljs"[0m [1;31m[[0m[1;31m{[0m[1;33m:name[0m semantic-csv.casters,
+[1;33m                     :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Translate to boolean from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                                :line[0m [36m104[0m,
+[1;33m                                :name[0m ->boolean,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Translate to double from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                                :line[0m [36m88[0m,
+[1;33m                                :name[0m ->double,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Translate to float from string or other numeric.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                                :line[0m [36m71[0m,
+[1;33m                                :name[0m ->float,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Takes a string, replacing consecutive underscores and spaces with a single dash(-),\nthen returns a keyword based on the transformed string."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                                :line[0m [36m11[0m,
+[1;33m                                :name[0m ->idiomatic-keyword,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Translate to int from string or other numeric. If string represents a non integer value,\nit will be rounded down to the nearest int.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                                :line[0m [36m31[0m,
+[1;33m                                :name[0m ->int,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m [1;31m[[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mnil-fill[1;31m][0m[1;31m}[0m x[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Translate to long from string or other numeric. If string represents a non integer value,\nwill be rounded down to the nearest long.\n\nAn opts map can be specified as the first arguments with the following options:\n* `:nil-fill` - return this when input is empty/nil."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/casters.cljc"[0m,
+[1;33m                                :line[0m [36m51[0m,
+[1;33m                                :name[0m ->long,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:doc[0m [1;35m"# Core API namespace\n"[0m,
+[1;33m                     :name[0m semantic-csv.core,
+[1;33m                     :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m331[0m,
+[1;33m                                :name[0m ->boolean,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m332[0m,
+[1;33m                                :name[0m ->double,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m333[0m,
+[1;33m                                :name[0m ->float,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m330[0m,
+[1;33m                                :name[0m ->idiomatic-keyword,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/core.cljc"[0m, [1;33m:line[0m [36m335[0m, [1;33m:name[0m ->int, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/core.cljc"[0m, [1;33m:line[0m [36m334[0m, [1;33m:name[0m ->long, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mn rows[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Takes sequence of items and returns a sequence of batches of items from the original\nsequence, at most `n` long."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m422[0m,
+[1;33m                                :name[0m batch,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns rows[1;31m][0m [1;31m[[0mcast-fns opts rows[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Casts the vals of each row according to `cast-fns`, which must either be a map of\n`column-name -> casting-fn` or a single casting function to be applied towards all columns.\nAdditionally, an `opts` map can be used to specify:\n\n* `:except-first` - Leaves the first row unaltered; useful for preserving header row.\n* `:exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m148[0m,
+[1;33m                                :name[0m cast-with,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m[[0m[1;31m[[0m&form &env & forms-and-data[1;31m][0m[1;31m][0m,
+[1;33m                                :doc[0m [1;35m"Takes any number of forms and a final `data` argument. Threads the data through the forms, as though\nwith `->>`, except that the first item in `data` remains unaltered. This is intended to operate within\nthe context of an _actual_ `->>` threading macro for processing, where you might want to leave a header\ncolumn unmodified by your processing functions."[0m,
+[1;33m                                :file[0m [30;41m-"/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-semantic-csv-0.2.1-alpha17876913422816717777/contents/semantic_csv/core.cljc"[0m
+[30;42m                                      +"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m206[0m,
+[1;33m                                :name[0m except-first,
+[1;33m                                :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrows[1;31m][0m
+[1;31m                                           [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                             :keys[0m [1;31m[[0mkeyify transform-header header structs[1;31m][0m,
+[1;33m                                             :or[0m [1;31m{[0mkeyify [1;36mtrue[0m[1;31m}[0m[1;31m}[0m
+                                            rows[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Takes a sequence of row vectors, as commonly produced by csv parsing libraries, and returns a sequence of\nmaps. By default, the first row vector will be interpreted as a header, and used as the keys for the maps.\nHowever, this and other behaviour are customizable via an optional `opts` map with the following options:\n\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n  If `:transform-header` is present, this option will be ignored.\n* `:transform-header` - A function that transforms the header/column names for each column.\n  This takes precedence over `keyify` and should be a function that takes a string.\n* `:header` - specify the header to use for map keys, preventing first row of data from being consumed as header.\n* `:structs` - bool; use structs instead of hash-maps or array-maps, for performance boost (default: `false`)."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m69[0m,
+[1;33m                                :name[0m mappify,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mopts rows[1;31m][0m [1;31m[[0mrows[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"This function wraps together the most frequently used input processing capabilities,\ncontrolled by an `opts` hash with opinionated defaults:\n\n* `:mappify` - bool; transform rows from vectors into maps using `mappify`.\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:header` - specify header to be used in mappify; as per `mappify`, first row will not be consumed as header\n* `:structs` - bool; use structs instead of array-maps or hash-maps in mappify.\n* `:remove-comments` - bool; remove comment lines, as specified by `:comment-re` or `:comment-char`. Also\n   removes empty lines. Defaults to `true`.\n* `:comment-re` - specify a regular expression to use for commenting out lines.\n* `:comment-char` - specify a comment character to use for filtering out comments; overrides comment-re.\n* `:cast-fns` - optional map of `colname | index -> cast-fn`; row maps will have the values as output by the\n   assigned `cast-fn`.\n* `:cast-exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:cast-only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m242[0m,
+[1;33m                                :name[0m process,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrows[1;31m][0m [1;31m[[0mopts rows[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Removes rows which start with a comment character (by default, `#`). Operates by checking whether\nthe first item of every row in the collection matches a comment pattern. Also removes empty lines.\nOptions include:\n\n* `:comment-re` - Specify a custom regular expression for determining which lines are commented out.\n* `:comment-char` - Checks for lines lines starting with this char.\n\nNote: this function only works with rows that are vectors, and so should always be used before mappify."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m111[0m,
+[1;33m                                :name[0m remove-comments,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrows[1;31m][0m [1;31m[[0mopts rows[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Take a sequence of maps, and transform them into a sequence of vectors. Options:\n\n* `:header` - The header to be used. If not specified, this defaults to `(-> rows first keys)`. Only\n  values corresponding to the specified header will be included in the output, and will be included in the\n  order corresponding to this argument.\n* `:prepend-header` - Defaults to true, and controls whether the `:header` vector should be prepended\n  to the output sequence.\n* `:format-header` - If specified, this function will be called on each element of the `:header` vector, and\n  the result prepended to the output sequence. The default behaviour is to leave strings alone but stringify\n  keyword names such that the `:` is removed from their string representation. Passing a falsey value will\n  leave the header unaltered in the output."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/core.cljc"[0m,
+[1;33m                                :line[0m [36m375[0m,
+[1;33m                                :name[0m vectorize,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:doc[0m [1;35m"This namespace consists of implementation details for the main API\n"[0m,
+[1;33m                     :name[0m semantic-csv.impl.core,
+[1;33m                     :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:arglists[0m [1;31m[[0m[1;31m[[0m&form &env do-it? & args[1;31m][0m[1;31m][0m,
+[1;33m                                :doc[0m [1;35m"Conditional double-arrow operation (->> nums (?>> inc-all? (map inc)))\n"[0m,
+[1;33m                                :file[0m [30;41m-"/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-semantic-csv-0.2.1-alpha17876913422816717777/contents/semantic_csv/impl/core.cljc"[0m
+[30;42m                                      +"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m123[0m,
+[1;33m                                :name[0m ?>>,
+[1;33m                                :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mf & args[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Utility that takes a function f, any number of regular args, and a final kw-args argument which will be\nsplatted in as a final argument"[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m13[0m,
+[1;33m                                :name[0m apply-kwargs,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns row & [1;31m{[0m[1;33m:keys[0m [1;31m[[0monly exception-handler[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Format the values of row with the given function. This gives us some flexbility with respect to formatting\nboth vectors and maps in similar fashion."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m46[0m,
+[1;33m                                :name[0m cast-row,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfsym[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Clone the var pointed to by fsym into current ns such that arglists, name and doc metadata are preserned.\n"[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m79[0m,
+[1;33m                                :name[0m clone-var,
+[1;33m                                :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mheader row[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Translates a single row of values into a map of `colname -> val`, given colnames in `header`.\n"[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m7[0m,
+[1;33m                                :name[0m mappify-row,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:doc[0m [1;35m"Check if value is a non-blank string.\n"[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m68[0m,
+[1;33m                                :name[0m not-blank?,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns exception-handler[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Returns a function that casts casts a single row value based on specified casting function and\noptionally excpetion handler"[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m34[0m,
+[1;33m                                :name[0m row-val-caster,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Leaves strings alone. Turns keywords into the stringified version of the keyword, sans the initial `:`\ncharacter. On anything else, calls str."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/impl/core.cljc"[0m,
+[1;33m                                :line[0m [36m24[0m,
+[1;33m                                :name[0m stringify-keyword,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:doc[0m [1;35m"# Transducers API namespace\n"[0m,
+[1;33m                     :name[0m semantic-csv.transducers,
+[1;33m                     :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m315[0m,
+[1;33m                                :name[0m ->boolean,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m316[0m,
+[1;33m                                :name[0m ->double,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m317[0m,
+[1;33m                                :name[0m ->float,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m314[0m,
+[1;33m                                :name[0m ->idiomatic-keyword,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m319[0m,
+[1;33m                                :name[0m ->int,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m318[0m,
+[1;33m                                :name[0m ->long,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mn[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Returns a transducer that will return a sequence of row batches, where the batch\nsize is n."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m420[0m,
+[1;33m                                :name[0m batch,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcast-fns[1;31m][0m
+[1;31m                                           [[0mcast-fns
+[1;31m                                            {[0m[1;33m:as[0m opts, [1;33m:keys[0m [1;31m[[0mexcept-first exception-handler only[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Returns a transducer that casts the vals of each row according to `cast-fns`, which must either\nbe a map of `column-name -> casting-fn` or a single casting function to be applied towards all columns.\nOptions include:\n\n* `:except-first` - Leaves the first row unaltered; useful for preserving header row.\n* `:exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m145[0m,
+[1;33m                                :name[0m cast-with,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m
+[1;31m                                           [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                             :keys[0m [1;31m[[0mkeyify transform-header header[1;31m][0m,
+[1;33m                                             :or[0m [1;31m{[0mkeyify [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Returns a transducer that transforms row vectors into maps, where keys are taken as the first row or as\nspecified via `:header` option.  Options include:\n\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:header` - specify the header to use for map keys, preventing first row of data from being consumed as header.\n* `:transform-header` - specify a transformation function for each header key (ignored if `:header` or `:keyify` is specified)."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m21[0m,
+[1;33m                                :name[0m mappify,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m[[0m[1;31m[][0m
+[1;31m                                           [[0m[1;31m{[0m[1;33m:as[0m opts,
+[1;33m                                             :keys[0m [1;31m[[0mmappify
+                                                    keyify
+                                                    header
+                                                    transform-header
+                                                    remove-comments
+                                                    comment-re
+                                                    comment-char
+                                                    structs
+                                                    cast-fns
+                                                    cast-exception-handler
+                                                    cast-only[1;31m][0m,
+[1;33m                                             :or[0m [1;31m{[0mcomment-re [30;41m-#"^\#"[0m [30;42m+#"^\#"[0m,
+                                                  keyify [1;36mtrue[0m,
+                                                  mappify [1;36mtrue[0m,
+                                                  remove-comments [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m][0m,
+[1;33m                                :doc[0m [1;35m"Returns a transducers that composes the most frequently used input processing capabilities,\nand is controlled by an `opts` hash with opinionated defaults:\n\n* `:mappify` - bool; transform rows from vectors into maps using `mappify`.\n* `:keyify` - bool; specify whether header/column names should be turned into keywords (default: `true`).\n* `:transform-header` - specify a transformation function for each header key (ignored if `:header` or `:keyify` is specified).\n* `:header` - specify header to be used in mappify; as per `mappify`, first row will not be consumed as header\n* `:structs` - bool; use structify insead of mappify\n* `:remove-comments` - bool; remove comment lines, as specified by `:comment-re` or `:comment-char`. Also\n   removes empty lines. Defaults to `true`.\n* `:comment-re` - specify a regular expression to use for commenting out lines.\n* `:comment-char` - specify a comment character to use for filtering out comments; overrides comment-re.\n* `:cast-fns` - optional map of `colname | index -> cast-fn`; row maps will have the values as output by the\n   assigned `cast-fn`.\n* `:cast-exception-handler` - If cast-fn raises an exception, this function will be called with args\n  `colname, value`, and the result used as the parse value.\n* `:cast-only` - Only cast the specified column(s); can be either a single column name, or a vector of them."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m209[0m,
+[1;33m                                :name[0m process,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0m[1;31m{[0m[1;33m:as[0m opts, [1;33m:keys[0m [1;31m[[0mcomment-re comment-char[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Returns a transducer that removes rows starting with a comment character (by default, `#`).\nOperates by checking whether the first item of every row in the collection matches a comment pattern.\nAlso removes empty lines. Options include:\n\n* `:comment-re` - Specify a custom regular expression for determining which lines are commented out.\n* `:comment-char` - Checks for lines lines starting with this char.\n\nNote: this function only works (or makes sense) with rows that are vectors, and so should always be used\nbefore mappify."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m107[0m,
+[1;33m                                :name[0m remove-comments,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m
+[1;31m                                           [[0m[1;31m{[0m[1;33m:keys[0m [1;31m[[0mheader prepend-header format-header[1;31m][0m,
+[1;33m                                             :or[0m [1;31m{[0mformat-header impl/stringify-keyword,
+                                                  prepend-header [1;36mtrue[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Returns a transducer that transforms maps into vectors. Options include:\n\n* `:header` - The header to be used. If not specified, this defaults to `(-> rows first keys)`. Only\n  values corresponding to the specified header will be included in the output, and will be included in the\n  order corresponding to this argument.\n* `:prepend-header` - Defaults to true, and controls whether the `:header` vector should be prepended\n  to the output sequence.\n* `:format-header` - If specified, this function will be called on each element of the `:header` vector, and\n  the result prepended to the output sequence. The default behaviour is to leave strings alone but stringify\n  keyword names such that the `:` is removed from their string representation. Passing a falsey value will\n  leave the header unaltered in the output."[0m,
+[1;33m                                :file[0m [1;35m"semantic_csv/transducers.cljc"[0m,
+[1;33m                                :line[0m [36m361[0m,
+[1;33m                                :name[0m vectorize,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m}[0m,
+[1;33m :artifact-id[0m [1;35m"semantic-csv"[0m,
+[1;33m :group-id[0m [1;35m"semantic-csv"[0m,
+[1;33m :pom-str[0m [1;35m"<?xml version=\"1.0\" encoding=\"UTF-8\"?><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>semantic-csv</groupId>\n  <artifactId>semantic-csv</artifactId>\n  <packaging>jar</packaging>\n  <version>0.2.1-alpha1</version>\n  <name>semantic-csv</name>\n  <description>A Clojure library with higher level CSV parsing functionality</description>\n  <url>http://github.com/metasoarous/semantic-csv</url>\n  <licenses>\n    <license>\n      <name>Eclipse Public License</name>\n      <url>http://www.eclipse.org/legal/epl-v10.html</url>\n    </license>\n  </licenses>\n  <scm>\n    <connection>scm:git:git://github.com/metasoarous/semantic-csv.git</connection>\n    <developerConnection>scm:git:ssh://git@github.com/metasoarous/semantic-csv.git</developerConnection>\n    <tag>4c56c5fdac71c6deb8f0b8f96a896bce95f996a7\n</tag>\n    <url>https://github.com/metasoarous/semantic-csv</url>\n  </scm>\n  <build>\n    <sourceDirectory>src</sourceDirectory>\n    <testSourceDirectory>test</testSourceDirectory>\n    <resources>\n      <resource>\n        <directory>resources</directory>\n      </resource>\n    </resources>\n    <testResources>\n      <testResource>\n        <directory>resources</directory>\n      </testResource>\n    </testResources>\n    <directory>target</directory>\n    <outputDirectory>target/classes</outputDirectory>\n    <plugins/>\n  </build>\n  <repositories>\n    <repository>\n      <id>central</id>\n      <url>https://repo1.maven.org/maven2/</url>\n      <snapshots>\n        <enabled>false</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n    <repository>\n      <id>clojars</id>\n      <url>https://clojars.org/repo/</url>\n      <snapshots>\n        <enabled>true</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n  </repositories>\n  <dependencyManagement>\n    <dependencies/>\n  </dependencyManagement>\n  <dependencies>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>clojure</artifactId>\n      <version>1.9.0-alpha14</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>clojurescript</artifactId>\n      <version>1.9.493</version>\n    </dependency>\n    <dependency>\n      <groupId>clojure-csv</groupId>\n      <artifactId>clojure-csv</artifactId>\n      <version>2.0.1</version>\n    </dependency>\n    <dependency>\n      <groupId>com.cemerick</groupId>\n      <artifactId>piggieback</artifactId>\n      <version>0.2.1</version>\n      <scope>test</scope>\n    </dependency>\n  </dependencies>\n</project>\n\n<!-- This file was autogenerated by Leiningen.\n  Please do not edit it directly; instead edit project.clj and regenerate it.\n  It should not be considered canonical data. For more information see\n  https://github.com/technomancy/leiningen -->\n"[0m,
+[1;33m :version[0m [1;35m"0.2.1-alpha1"[0m[1;31m}[0m

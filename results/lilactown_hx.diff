@@ -1,0 +1,36 @@
+ERROR during diff:
+#error {
+ :cause expected 1 match for result file lilactown/hx /old/ got: ()
+ :data {}
+ :via
+ [{:type clojure.lang.ExceptionInfo
+   :message expected 1 match for result file lilactown/hx /old/ got: ()
+   :data {}
+   :at [comparative_test.diff$find_edn_file invokeStatic diff.clj 87]}]
+ :trace
+ [[comparative_test.diff$find_edn_file invokeStatic diff.clj 87]
+  [comparative_test.diff$find_edn_file invoke diff.clj 80]
+  [comparative_test.diff$diff invokeStatic diff.clj 92]
+  [comparative_test.diff$diff invoke diff.clj 90]
+  [comparative_test.test$diff$fn__2366 invoke test.clj 45]
+  [comparative_test.test$diff invokeStatic test.clj 45]
+  [comparative_test.test$diff invoke test.clj 42]
+  [comparative_test.test$_main$fn__2377 invoke test.clj 129]
+  [clojure.core$run_BANG_$fn__8790 invoke core.clj 7715]
+  [clojure.lang.PersistentVector reduce PersistentVector.java 343]
+  [clojure.core$reduce invokeStatic core.clj 6827]
+  [clojure.core$run_BANG_ invokeStatic core.clj 7710]
+  [clojure.core$run_BANG_ invoke core.clj 7710]
+  [comparative_test.test$_main invokeStatic test.clj 129]
+  [comparative_test.test$_main invoke test.clj 97]
+  [clojure.lang.AFn applyToHelper AFn.java 152]
+  [clojure.lang.AFn applyTo AFn.java 144]
+  [clojure.lang.Var applyTo Var.java 705]
+  [clojure.core$apply invokeStatic core.clj 665]
+  [clojure.main$main_opt invokeStatic main.clj 514]
+  [clojure.main$main_opt invoke main.clj 510]
+  [clojure.main$main invokeStatic main.clj 664]
+  [clojure.main$main doInvoke main.clj 616]
+  [clojure.lang.RestFn applyTo RestFn.java 137]
+  [clojure.lang.Var applyTo Var.java 705]
+  [clojure.main main main.java 40]]}

@@ -1,0 +1,817 @@
+found results/old/analysis-out/cljdoc-edn/metosin/compojure-api/2.0.0-alpha27/cljdoc.edn
+found results/new/analysis-out/cljdoc-edn/metosin/compojure-api/2.0.0-alpha27/cljdoc.edn
+[1;31m{[0m[1;33m:analysis[0m [1;31m{[0m[1;35m"clj"[0m [1;31m[[0m[1;31m{[0m[1;33m:name[0m compojure.api.api,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a ring handler wrapped in compojure.api.middleware/api-middlware.\nCreates the route-table at api creation time and injects that into the request via\nmiddlewares. Api and the mounted api-middleware can be configured by optional\noptions map as the first parameter:\n\n    (api\n      {:exceptions {:handlers {:compojure.api.exception/default my-logging-handler}}\n       :api {:invalid-routes-fn (constantly nil)}\n       :swagger {:spec \"/swagger.json\"\n                 :ui \"/api-docs\"\n                 :data {:info {:version \"1.0.0\"\n                               :title \"My API\"\n                               :description \"the description\"}}}}\n      (context \"/api\" []\n        ...))\n\n### direct api options:\n\n- **:api**                       All api options are under `:api`.\n   - **:invalid-routes-fn**        A 2-arity function taking handler and a sequence of\n                                   invalid routes (not satisfying compojure.api.route.Routing)\n                                   setting value to nil ignores invalid routes completely.\n                                   defaults to `compojure.api.routes/log-invalid-child-routes`\n   - **:disable-api-middleware?**  boolean to disable the `api-middleware` from api.\n- **:swagger**                   Options to configure the Swagger-routes. Defaults to nil.\n                                 See `compojure.api.swagger/swagger-routes` for details.\n\n### api-middleware options\n\nSee `compojure.api.middleware/api-middleware` for more available options.\n\nOpinionated chain of middlewares for web apis. Takes optional options-map.\n\n### Exception handlers\n\nAn error handler is a function of exception, ex-data and request to response.\n\nWhen defining these options, it is suggested to use alias for the exceptions namespace,\ne.g. `[compojure.api.exception :as ex]`.\n\nDefault:\n\n    {::ex/request-validation  ex/request-validation-handler\n     ::ex/request-parsing     ex/request-parsing-handler\n     ::ex/response-validation ex/response-validation-handler\n     ::ex/default             ex/safe-handler}\n\nNote: Because the handlers are merged into default handlers map, to disable default handler you\nneed to provide `nil` value as handler.\n\nNote: To catch Schema errors use `{:schema.core/error ex/schema-error-handler}`.\n\n### Options\n\n- **:exceptions**                for *compojure.api.middleware/wrap-exceptions* (nil to unmount it)\n    - **:handlers**                Map of error handlers for different exception types, type refers to `:type` key in ExceptionInfo data.\n\n- **:formats**                   for Muuntaja middleware. Value can be a valid muuntaja options-map,\n                                 a Muuntaja instance or nil (to unmount it). See\n                                 https://github.com/metosin/muuntaja/wiki/Configuration for details.\n\n- **:middleware**                vector of extra middleware to be applied last (just before the handler).\n\n- **:ring-swagger**              options for ring-swagger's swagger-json method.\n                                 e.g. `{:ignore-missing-mappings? true}`\n\n- **:coercion**                  A function from request->type->coercion-matcher, used\n                                 in endpoint coercion for types :body, :string and :response.\n                                 Defaults to `compojure.api.middleware/default-coercion`\n                                 Setting value to nil disables all coercion.\n\n- **:components**                Components which should be accessible to handlers using\n                                 :components restructuring. (If you are using api,\n                                 you might want to take look at using wrap-components\n                                 middleware manually.). Defaults to nil (middleware not mounted)."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/api.clj"[0m,
+[1;33m                               :line[0m [36m19[0m,
+[1;33m                               :name[0m api,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/api.clj"[0m,
+[1;33m                               :line[0m [36m12[0m,
+[1;33m                               :name[0m api-defaults,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.async, [1;33m:publics[0m [1;31m()[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.coercion,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmodel in type keywordize? open? request[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m37[0m,
+[1;33m                               :name[0m coerce-request!,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest [1;31m{[0m[1;33m:as[0m response, [1;33m:keys[0m [1;31m[[0mstatus body[1;31m][0m[1;31m}[0m responses[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m59[0m,
+[1;33m                               :name[0m coerce-response!,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m11[0m,
+[1;33m                               :name[0m default-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmayby-coercion spec info[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m33[0m,
+[1;33m                               :name[0m get-apidocs,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m get-request-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mcoercion[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m26[0m,
+[1;33m                               :name[0m resolve-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest coercion[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m13[0m,
+[1;33m                               :name[0m set-request-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler responses[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion.clj"[0m,
+[1;33m                               :line[0m [36m92[0m,
+[1;33m                               :name[0m wrap-coerce-response,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.coercion.core,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"compojure/api/coercion/core.clj"[0m,
+[1;33m                               :line[0m [36m3[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis model[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m accept-response?,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis model value type format request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m coerce-request,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis model value type format request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m coerce-response,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis error[1;31m][0m[1;31m)[0m, [1;33m:name[0m encode-error, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis model data[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m get-apidocs,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis[1;31m][0m[1;31m)[0m, [1;33m:name[0m get-name, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis model[1;31m][0m[1;31m)[0m, [1;33m:name[0m make-open, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Coercion,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[30;42m                              +{:file "compojure/api/coercion/core.clj",
+                                :line 12,
+                                :name CoercionError,
+                                :type :var}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/core.clj"[0m,
+[1;33m                               :line[0m [36m14[0m,
+[1;33m                               :name[0m named-coercion,
+[1;33m                               :type[0m [1;33m:multimethod[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.coercion.schema,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m37[0m,
+[1;33m                               :name[0m coerce-response?,
+[1;33m                               :type[0m [1;33m:multimethod[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m85[0m,
+[1;33m                               :name[0m create-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m88[0m,
+[1;33m                               :name[0m default-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m77[0m,
+[1;33m                               :name[0m default-options,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m json-coercion-matcher,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m33[0m,
+[1;33m                               :name[0m memoized-coercer,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "compojure/api/coercion/schema.clj",
+                                :line 41,
+                                :name SchemaCoercion,
+                                :type :var}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m15[0m,
+[1;33m                               :name[0m string-coercion-matcher,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0merror[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Stringifies Schema records recursively.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion/schema.clj"[0m,
+[1;33m                               :line[0m [36m18[0m,
+[1;33m                               :name[0m stringify,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.coercion.spec,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m90[0m,
+[1;33m                               :name[0m coerce-response?,
+[1;33m                               :type[0m [1;33m:multimethod[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m150[0m,
+[1;33m                               :name[0m create-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m153[0m,
+[1;33m                               :name[0m default-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m142[0m,
+[1;33m                               :name[0m default-options,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m34[0m,
+[1;33m                               :name[0m default-transformer,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m25[0m,
+[1;33m                               :name[0m json-transformer,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mspec[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m80[0m,
+[1;33m                               :name[0m maybe-memoized-specify,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m77[0m,
+[1;33m                               :name[0m memoized-specify,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "compojure/api/coercion/spec.clj",
+                                :line 93,
+                                :name SpecCoercion,
+                                :type :var}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m37[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis name[1;31m][0m[1;31m)[0m, [1;33m:name[0m specify, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Specify,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m string-transformer,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mpred[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/coercion/spec.clj"[0m,
+[1;33m                               :line[0m [36m85[0m,
+[1;33m                               :name[0m stringify-pred,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.common,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mc expect-body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extract parameters from head of the list. Parameters can be:\n\n1. a map (if followed by any form) `[{:a 1 :b 2} :body]` => `{:a 1 :b 2}`\n2. list of keywords & values `[:a 1 :b 2 :body]` => `{:a 1 :b 2}`\n3. else => `{}`\n\nReturns a tuple with parameters and body without the parameters"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m8[0m,
+[1;33m                               :name[0m extract-parameters,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx y[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m46[0m,
+[1;33m                               :name[0m fast-map-merge,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mf size[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m54[0m,
+[1;33m                               :name[0m fifo-memoize,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mpred coll[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Groups a sequence with predicate returning a tuple of sequences.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m33[0m,
+[1;33m                               :name[0m group-with,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mv[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Merges vector elements, optimized for 1 arity (x10 faster than merge).\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m39[0m,
+[1;33m                               :name[0m merge-vector,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"checks whether input is a map, but not a record\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m4[0m,
+[1;33m                               :name[0m plain-map?,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mns & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/common.clj"[0m,
+[1;33m                               :line[0m [36m73[0m,
+[1;33m                               :name[0m when-ns,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:doc[0m [1;35m"Compatibility for older Compojure versions.\n"[0m,
+[1;33m                    :name[0m compojure.api.compojure-compat,
+[1;33m                    :publics[0m [1;31m()[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.core,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m61[0m,
+[1;33m                               :name[0m ANY,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m58[0m,
+[1;33m                               :name[0m context,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mname & routes[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Define a Ring handler function from a sequence of routes.\nThe name may optionally be followed by a doc-string and metadata map."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m24[0m,
+[1;33m                               :name[0m defroutes,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m64[0m,
+[1;33m                               :name[0m DELETE,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m60[0m,
+[1;33m                               :name[0m GET,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m62[0m,
+[1;33m                               :name[0m HEAD,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mbindings & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes a vector of bindings and a body of routes.\n\nEquivalent to: `(let [...] (routes ...))`"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m32[0m,
+[1;33m                               :name[0m let-routes,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m65[0m,
+[1;33m                               :name[0m OPTIONS,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m63[0m,
+[1;33m                               :name[0m PATCH,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m66[0m,
+[1;33m                               :name[0m POST,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m67[0m,
+[1;33m                               :name[0m PUT,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates vanilla ring-handler from any invokable thing (e.g. compojure-api route)\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m9[0m,
+[1;33m                               :name[0m ring-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmiddleware & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Wraps routes with given middlewares using thread-first macro.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m47[0m,
+[1;33m                               :name[0m route-middleware,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& handlers[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Create a Ring handler by combining several handlers into one.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& handlers[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Routes without route-documentation. Can be used to wrap routes,\nnot satisfying compojure.api.routes/Routing -protocol."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m40[0m,
+[1;33m                               :name[0m undocumented,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.exception,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ [1;31m{[0m[1;33m:keys[0m [1;31m[[0mresponse[1;31m][0m[1;31m}[0m _[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"reads response from ex-data :response\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m59[0m,
+[1;33m                               :name[0m http-response-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m96[0m,
+[1;33m                               :name[0m mapped-exception-types,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mex data req[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m70[0m,
+[1;33m                               :name[0m request-parsing-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0me data req[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates error response based on Schema error. The following keys are available:\n\n:type            type of the exception (::request-validation)\n:coercion        coercion instance used\n:value           value that was validated\n:in              location of the value (e.g. [:request :query-params])\n:schema          schema to be validated against\n:error           schema error\n:request         raw request"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m42[0m,
+[1;33m                               :name[0m request-validation-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0me data req[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates error response based on a response error. The following keys are available:\n\n:type            type of the exception (::response-validation)\n:coercion        coercion instance used\n:in              location of the value ([:response :body])\n:schema          schema to be validated against\n:error           schema error\n:request         raw request\n:response        raw response"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m23[0m,
+[1;33m                               :name[0m response-validation-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0me data req[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Writes :error to log with the exception message & stacktrace.\n\nError response only contains class of the Exception so that it won't accidentally\nexpose secret details."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m12[0m,
+[1;33m                               :name[0m safe-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0me data req[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates error response based on Schema error.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m64[0m,
+[1;33m                               :name[0m schema-error-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler log-level[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Wrap compojure-api exception-handler a function which will log the\nexception message and stack-trace with given log-level."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/exception.clj"[0m,
+[1;33m                               :line[0m [36m82[0m,
+[1;33m                               :name[0m with-logging,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.help,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& s[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/help.clj"[0m,
+[1;33m                               :line[0m [36m20[0m,
+[1;33m                               :name[0m code,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mtopic[1;31m][0m [1;31m[[0mtopic subject[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Inputs: ([] [topic :- Topic] [topic :- Topic subject :- Subject])\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/help.clj"[0m,
+[1;33m                               :line[0m [36m62[0m,
+[1;33m                               :name[0m help,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/help.clj"[0m,
+[1;33m                               :line[0m [36m23[0m,
+[1;33m                               :name[0m help-for,
+[1;33m                               :type[0m [1;33m:multimethod[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/help.clj"[0m, [1;33m:line[0m [36m6[0m, [1;33m:name[0m Subject, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& s[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/help.clj"[0m,
+[1;33m                               :line[0m [36m12[0m,
+[1;33m                               :name[0m text,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& s[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/help.clj"[0m,
+[1;33m                               :line[0m [36m17[0m,
+[1;33m                               :name[0m title,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/help.clj"[0m, [1;33m:line[0m [36m5[0m, [1;33m:name[0m Topic, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.main,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/main.clj"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m -main,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/main.clj"[0m,
+[1;33m                               :line[0m [36m5[0m,
+[1;33m                               :name[0m resolve-start-fn,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.meta,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:doc[0m [1;35m"lexically bound ring-request for handlers.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m17[0m,
+[1;33m                               :name[0m +compojure-api-request+,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mbindings & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Dummy let-macro used in resolving route-docs. not part of normal invokation chain.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m557[0m,
+[1;33m                               :name[0m dummy-let,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mbindings & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Dummy letk-macro used in resolving route-docs. not part of normal invokation chain.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m563[0m,
+[1;33m                               :name[0m dummy-letk,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mbind[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m28[0m,
+[1;33m                               :name[0m fnk-schema,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0minfo[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Merge parameters at runtime to allow usage of runtime-paramers with route-macros.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m622[0m,
+[1;33m                               :name[0m merge-parameters,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmethod [1;31m[[0mpath route-arg & args[1;31m][0m [1;31m{[0m[1;33m:keys[0m [1;31m[[0mcontext?[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m631[0m,
+[1;33m                               :name[0m restructure,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Restructures a key value pair in smart routes. By default the key\nis consumed form the :parameters map in acc. k = given key, v = value."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m66[0m,
+[1;33m                               :name[0m restructure-param,
+[1;33m                               :type[0m [1;33m:multimethod[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandlers[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m586[0m,
+[1;33m                               :name[0m routing,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mschema key type[1;31m][0m [1;31m[[0mschema key type keywordize?[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Inputs: ([schema key type] [schema key type keywordize?])\n\nReturn source code for coerce! for a schema with coercion type,\nextracted from a key in a ring request."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m50[0m,
+[1;33m                               :name[0m src-coerce!,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mpath route[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m580[0m,
+[1;33m                               :name[0m static-context,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mschema[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/meta.clj"[0m,
+[1;33m                               :line[0m [36m25[0m,
+[1;33m                               :name[0m strict,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.methods,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:file[0m [1;35m"compojure/api/methods.clj"[0m,
+[1;33m                               :line[0m [36m3[0m,
+[1;33m                               :name[0m all-methods,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.middleware,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler options[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Opinionated chain of middlewares for web apis. Takes optional options-map.\n\n### Exception handlers\n\nAn error handler is a function of exception, ex-data and request to response.\n\nWhen defining these options, it is suggested to use alias for the exceptions namespace,\ne.g. `[compojure.api.exception :as ex]`.\n\nDefault:\n\n    {::ex/request-validation  ex/request-validation-handler\n     ::ex/request-parsing     ex/request-parsing-handler\n     ::ex/response-validation ex/response-validation-handler\n     ::ex/default             ex/safe-handler}\n\nNote: Because the handlers are merged into default handlers map, to disable default handler you\nneed to provide `nil` value as handler.\n\nNote: To catch Schema errors use `{:schema.core/error ex/schema-error-handler}`.\n\n### Options\n\n- **:exceptions**                for *compojure.api.middleware/wrap-exceptions* (nil to unmount it)\n    - **:handlers**                Map of error handlers for different exception types, type refers to `:type` key in ExceptionInfo data.\n\n- **:formats**                   for Muuntaja middleware. Value can be a valid muuntaja options-map,\n                                 a Muuntaja instance or nil (to unmount it). See\n                                 https://github.com/metosin/muuntaja/wiki/Configuration for details.\n\n- **:middleware**                vector of extra middleware to be applied last (just before the handler).\n\n- **:ring-swagger**              options for ring-swagger's swagger-json method.\n                                 e.g. `{:ignore-missing-mappings? true}`\n\n- **:coercion**                  A function from request->type->coercion-matcher, used\n                                 in endpoint coercion for types :body, :string and :response.\n                                 Defaults to `compojure.api.middleware/default-coercion`\n                                 Setting value to nil disables all coercion.\n\n- **:components**                Components which should be accessible to handlers using\n                                 :components restructuring. (If you are using api,\n                                 you might want to take look at using wrap-components\n                                 middleware manually.). Defaults to nil (middleware not mounted)."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m213[0m,
+[1;33m                               :name[0m api-middleware,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m198[0m,
+[1;33m                               :name[0m api-middleware-defaults,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m209[0m,
+[1;33m                               :name[0m api-middleware-options,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmiddleware[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m163[0m,
+[1;33m                               :name[0m compose-middleware,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mmuuntaja-or-options[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m128[0m,
+[1;33m                               :name[0m create-muuntaja,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m122[0m,
+[1;33m                               :name[0m default-muuntaja-options,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ response[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns true if the response body is serializable: body is a\ncollection or response has key :compojure.api.meta/serializable?"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m115[0m,
+[1;33m                               :name[0m encode?,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mreq[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m84[0m,
+[1;33m                               :name[0m get-components,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Reads and deep-merges top-level swagger-data from request,\npushed in by set-swagger-data."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m179[0m,
+[1;33m                               :name[0m get-swagger-data,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmiddleware[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m157[0m,
+[1;33m                               :name[0m middleware-fn,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest data[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Add extra top-level swagger-data into a request.\nData can be read with get-swagger-data."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m173[0m,
+[1;33m                               :name[0m set-swagger-data,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler coercion[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m104[0m,
+[1;33m                               :name[0m wrap-coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler components[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Assoc given components to the request.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m75[0m,
+[1;33m                               :name[0m wrap-components,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler [1;31m{[0m[1;33m:keys[0m [1;31m[[0mhandlers[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Catches all exceptions and delegates to correct error handler according to :type of Exceptions\n- **:handlers** - a map from exception type to handler\n  - **:compojure.api.exception/default** - Handler used when exception type doesn't match other handler,\n                                           by default prints stack trace."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m46[0m,
+[1;33m                               :name[0m wrap-exceptions,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler options[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Muuntaja format middleware. Can be safely mounted on top of multiple api\n\n- **:formats**                   for Muuntaja middleware. Value can be a valid muuntaja options-map,\n                                 a Muuntaja instance or nil (to unmount it). See\n                                 https://github.com/metosin/muuntaja/wiki/Configuration for details."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m301[0m,
+[1;33m                               :name[0m wrap-format,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler data[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Injects data into the request.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m91[0m,
+[1;33m                               :name[0m wrap-inject-data,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler data[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that adds top level swagger-data into request.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/middleware.clj"[0m,
+[1;33m                               :line[0m [36m185[0m,
+[1;33m                               :name[0m wrap-swagger-data,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.request,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:doc[0m [1;35m"Request-scoped coercion\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/request.clj"[0m,
+[1;33m                               :line[0m [36m3[0m,
+[1;33m                               :name[0m coercion,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Reverse routing tree\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/request.clj"[0m,
+[1;33m                               :line[0m [36m19[0m,
+[1;33m                               :name[0m lookup,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Muuntaja instance\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/request.clj"[0m,
+[1;33m                               :line[0m [36m23[0m,
+[1;33m                               :name[0m muuntaja,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Paths\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/request.clj"[0m,
+[1;33m                               :line[0m [36m15[0m,
+[1;33m                               :name[0m paths,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Ring-swagger options\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/request.clj"[0m,
+[1;33m                               :line[0m [36m11[0m,
+[1;33m                               :name[0m ring-swagger,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Vector of extra swagger data\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/request.clj"[0m,
+[1;33m                               :line[0m [36m7[0m,
+[1;33m                               :name[0m swagger,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.resource,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/resource.clj"[0m,
+[1;33m                               :line[0m [36m143[0m,
+[1;33m                               :name[0m Options,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mdata[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates a nested compojure-api Route from enchanced ring-swagger operations map.\nBy default, applies both request- and response-coercion based on those definitions.\n\nExtra keys:\n\n- **:middleware**     Middleware in duct-format either at top-level or under methods.\n                      Top-level mw are applied first if route matches, method-level\n                      mw are applied next if method matches\n\n- **:coercion**       A function from request->type->coercion-matcher, used\n                      in resource coercion for :body, :string and :response.\n                      Setting value to `(constantly nil)` disables both request- &\n                      response coercion. See tests and wiki for details.\n\nEnchancements to ring-swagger operations map:\n\n1) :parameters use ring request keys (query-params, path-params, ...) instead of\nswagger-params (query, path, ...). This keeps things simple as ring keys are used in\nthe handler when destructuring the request.\n\n2) at resource root, one can add any ring-swagger operation definitions, which will be\navailable for all operations, using the following rules:\n\n  2.1) :parameters are deep-merged into operation :parameters\n  2.2) :responses are merged into operation :responses (operation can fully override them)\n  2.3) all others (:produces, :consumes, :summary,...) are deep-merged by compojure-api\n\n3) special keys `:handler` and/or `:async-handler` either under operations or at top-level.\nThey should be 1-ary and 3-ary Ring handler functions, respectively, that are responsible\nfor the actual request processing. Handler lookup order is the following:\n\n  3.1) If called asynchronously, operations-level :async-handler\n  3.2) Operations-level :handler\n  3.3) If called asynchronously, top-level :async-handler\n  3.4) Top-level :handler\n\n4) request-coercion is applied once, using deep-merged parameters for a given\noperation or resource-level if only resource-level handler is defined.\n\n5) response-coercion is applied once, using merged responses for a given\noperation or resource-level if only resource-level handler is defined.\n\nNote: Swagger operations are generated only from declared operations (:get, :post, ..),\ndespite the top-level handler could process more operations.\n\nExample:\n\n(resource\n  {:parameters {:query-params {:x Long}}\n   :responses {500 {:schema {:reason s/Str}}}\n   :get {:parameters {:query-params {:y Long}}\n         :responses {200 {:schema {:total Long}}}\n         :handler (fn [request]\n                    (ok {:total (+ (-> request :query-params :x)\n                                   (-> request :query-params :y))}))}\n   :post {}\n   :handler (constantly\n              (internal-server-error {:reason \"not implemented\"}))})"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/resource.clj"[0m,
+[1;33m                               :line[0m [36m148[0m,
+[1;33m                               :name[0m resource,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.routes,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroutes[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m167[0m,
+[1;33m                               :name[0m all-paths,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler invalid-childs[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m111[0m,
+[1;33m                               :name[0m fail-on-invalid-child-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m{[0m[1;33m:as[0m handler, [1;33m:keys[0m [1;31m[[0mchilds[1;31m][0m[1;31m}[0m
+[1;31m                                           {[0m[1;33m:keys[0m [1;31m[[0minvalid-routes-fn[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m40[0m,
+[1;33m                               :name[0m filter-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler options[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m46[0m,
+[1;33m                               :name[0m get-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler options[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m55[0m,
+[1;33m                               :name[0m get-static-context-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler invalid-childs[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m116[0m,
+[1;33m                               :name[0m log-invalid-child-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mendpoint[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m200[0m,
+[1;33m                               :name[0m non-nil-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute-name & [1;31m[[0mparams[1;31m][0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extracts the lookup-table from request and finds a route by name.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m240[0m,
+[1;33m                               :name[0m path-for,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute-name request & [1;31m[[0mparams[1;31m][0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extracts the lookup-table from request and finds a route by name.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m227[0m,
+[1;33m                               :name[0m path-for*,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroutes[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m142[0m,
+[1;33m                               :name[0m ring-swagger-paths,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "compojure/api/routes.clj", :line 68, :name Route, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroutes[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m178[0m,
+[1;33m                               :name[0m route-lookup-table,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m30[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler options[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m -get-routes,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Routing,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.swagger,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m15[0m,
+[1;33m                               :name[0m base-path,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m55[0m,
+[1;33m                               :name[0m swagger-defaults,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m{[0m[1;33m:as[0m options, [1;33m:keys[0m [1;31m[[0mpath[1;31m][0m, [1;33m:or[0m [1;31m{[0mpath [1;35m"/swagger.json"[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m36[0m,
+[1;33m                               :name[0m swagger-docs,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns routes for swagger-articats (ui & spec). Accepts an options map, with the\nfollowing options:\n\n**:ui**              Path for the swagger-ui (defaults to \"/\").\n                     Setting the value to nil will cause the swagger-ui not to be mounted\n\n**:spec**            Path for the swagger-spec (defaults to \"/swagger.json\")\n                     Setting the value to nil will cause the swagger-ui not to be mounted\n\n**:data**            Swagger data in the Ring-Swagger format.\n\n**:options**\n  **:ui**            Options to configure the ui\n  **:spec**          Options to configure the spec. Nada at the moment.\n\nExample options:\n\n  {:ui \"/api-docs\"\n   :spec \"/swagger.json\"\n   :options {:ui {:jsonEditor true}\n             :spec {}}\n   :data {:basePath \"/app\"\n          :info {:version \"1.0.0\"\n                 :title \"Sausages\"\n                 :description \"Sausage description\"\n                 :termsOfService \"http://helloreverb.com/terms/\"\n                 :contact {:name \"My API Team\"\n                           :email \"foo@example.com\"\n                           :url \"http://www.metosin.fi\"}\n                 :license {:name: \"Eclipse Public License\"\n                           :url: \"http://www.eclipse.org/legal/epl-v10.html\"}}\n          :tags [{:name \"sausages\", :description \"Sausage api-set\"}]}}"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m57[0m,
+[1;33m                               :name[0m swagger-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mapp[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m19[0m,
+[1;33m                               :name[0m swagger-spec-path,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m31[0m,
+[1;33m                               :name[0m swagger-ui,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mswagger[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m28[0m,
+[1;33m                               :name[0m transform-operations,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.sweet,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m61[0m,
+[1;33m                               :name[0m ANY,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns a ring handler wrapped in compojure.api.middleware/api-middlware.\nCreates the route-table at api creation time and injects that into the request via\nmiddlewares. Api and the mounted api-middleware can be configured by optional\noptions map as the first parameter:\n\n    (api\n      {:exceptions {:handlers {:compojure.api.exception/default my-logging-handler}}\n       :api {:invalid-routes-fn (constantly nil)}\n       :swagger {:spec \"/swagger.json\"\n                 :ui \"/api-docs\"\n                 :data {:info {:version \"1.0.0\"\n                               :title \"My API\"\n                               :description \"the description\"}}}}\n      (context \"/api\" []\n        ...))\n\n### direct api options:\n\n- **:api**                       All api options are under `:api`.\n   - **:invalid-routes-fn**        A 2-arity function taking handler and a sequence of\n                                   invalid routes (not satisfying compojure.api.route.Routing)\n                                   setting value to nil ignores invalid routes completely.\n                                   defaults to `compojure.api.routes/log-invalid-child-routes`\n   - **:disable-api-middleware?**  boolean to disable the `api-middleware` from api.\n- **:swagger**                   Options to configure the Swagger-routes. Defaults to nil.\n                                 See `compojure.api.swagger/swagger-routes` for details.\n\n### api-middleware options\n\nSee `compojure.api.middleware/api-middleware` for more available options.\n\nOpinionated chain of middlewares for web apis. Takes optional options-map.\n\n### Exception handlers\n\nAn error handler is a function of exception, ex-data and request to response.\n\nWhen defining these options, it is suggested to use alias for the exceptions namespace,\ne.g. `[compojure.api.exception :as ex]`.\n\nDefault:\n\n    {::ex/request-validation  ex/request-validation-handler\n     ::ex/request-parsing     ex/request-parsing-handler\n     ::ex/response-validation ex/response-validation-handler\n     ::ex/default             ex/safe-handler}\n\nNote: Because the handlers are merged into default handlers map, to disable default handler you\nneed to provide `nil` value as handler.\n\nNote: To catch Schema errors use `{:schema.core/error ex/schema-error-handler}`.\n\n### Options\n\n- **:exceptions**                for *compojure.api.middleware/wrap-exceptions* (nil to unmount it)\n    - **:handlers**                Map of error handlers for different exception types, type refers to `:type` key in ExceptionInfo data.\n\n- **:formats**                   for Muuntaja middleware. Value can be a valid muuntaja options-map,\n                                 a Muuntaja instance or nil (to unmount it). See\n                                 https://github.com/metosin/muuntaja/wiki/Configuration for details.\n\n- **:middleware**                vector of extra middleware to be applied last (just before the handler).\n\n- **:ring-swagger**              options for ring-swagger's swagger-json method.\n                                 e.g. `{:ignore-missing-mappings? true}`\n\n- **:coercion**                  A function from request->type->coercion-matcher, used\n                                 in endpoint coercion for types :body, :string and :response.\n                                 Defaults to `compojure.api.middleware/default-coercion`\n                                 Setting value to nil disables all coercion.\n\n- **:components**                Components which should be accessible to handlers using\n                                 :components restructuring. (If you are using api,\n                                 you might want to take look at using wrap-components\n                                 middleware manually.). Defaults to nil (middleware not mounted)."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/api.clj"[0m,
+[1;33m                               :line[0m [36m19[0m,
+[1;33m                               :name[0m api,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m58[0m,
+[1;33m                               :name[0m context,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mname & routes[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Define a Ring handler function from a sequence of routes.\nThe name may optionally be followed by a doc-string and metadata map."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m24[0m,
+[1;33m                               :name[0m defroutes,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m64[0m,
+[1;33m                               :name[0m DELETE,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mschema desc & kvs[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Attach description and possibly other meta-data to a schema.\n"[0m,
+[1;33m                               :file[0m [1;35m"ring/swagger/json_schema.clj"[0m,
+[1;33m                               :line[0m [36m44[0m,
+[1;33m                               :name[0m describe,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m60[0m,
+[1;33m                               :name[0m GET,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m62[0m,
+[1;33m                               :name[0m HEAD,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mbindings & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Takes a vector of bindings and a body of routes.\n\nEquivalent to: `(let [...] (routes ...))`"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m32[0m,
+[1;33m                               :name[0m let-routes,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m65[0m,
+[1;33m                               :name[0m OPTIONS,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m63[0m,
+[1;33m                               :name[0m PATCH,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute-name & [1;31m[[0mparams[1;31m][0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extracts the lookup-table from request and finds a route by name.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/routes.clj"[0m,
+[1;33m                               :line[0m [36m240[0m,
+[1;33m                               :name[0m path-for,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m66[0m,
+[1;33m                               :name[0m POST,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& args[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m67[0m,
+[1;33m                               :name[0m PUT,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mdata[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates a nested compojure-api Route from enchanced ring-swagger operations map.\nBy default, applies both request- and response-coercion based on those definitions.\n\nExtra keys:\n\n- **:middleware**     Middleware in duct-format either at top-level or under methods.\n                      Top-level mw are applied first if route matches, method-level\n                      mw are applied next if method matches\n\n- **:coercion**       A function from request->type->coercion-matcher, used\n                      in resource coercion for :body, :string and :response.\n                      Setting value to `(constantly nil)` disables both request- &\n                      response coercion. See tests and wiki for details.\n\nEnchancements to ring-swagger operations map:\n\n1) :parameters use ring request keys (query-params, path-params, ...) instead of\nswagger-params (query, path, ...). This keeps things simple as ring keys are used in\nthe handler when destructuring the request.\n\n2) at resource root, one can add any ring-swagger operation definitions, which will be\navailable for all operations, using the following rules:\n\n  2.1) :parameters are deep-merged into operation :parameters\n  2.2) :responses are merged into operation :responses (operation can fully override them)\n  2.3) all others (:produces, :consumes, :summary,...) are deep-merged by compojure-api\n\n3) special keys `:handler` and/or `:async-handler` either under operations or at top-level.\nThey should be 1-ary and 3-ary Ring handler functions, respectively, that are responsible\nfor the actual request processing. Handler lookup order is the following:\n\n  3.1) If called asynchronously, operations-level :async-handler\n  3.2) Operations-level :handler\n  3.3) If called asynchronously, top-level :async-handler\n  3.4) Top-level :handler\n\n4) request-coercion is applied once, using deep-merged parameters for a given\noperation or resource-level if only resource-level handler is defined.\n\n5) response-coercion is applied once, using merged responses for a given\noperation or resource-level if only resource-level handler is defined.\n\nNote: Swagger operations are generated only from declared operations (:get, :post, ..),\ndespite the top-level handler could process more operations.\n\nExample:\n\n(resource\n  {:parameters {:query-params {:x Long}}\n   :responses {500 {:schema {:reason s/Str}}}\n   :get {:parameters {:query-params {:y Long}}\n         :responses {200 {:schema {:total Long}}}\n         :handler (fn [request]\n                    (ok {:total (+ (-> request :query-params :x)\n                                   (-> request :query-params :y))}))}\n   :post {}\n   :handler (constantly\n              (internal-server-error {:reason \"not implemented\"}))})"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/resource.clj"[0m,
+[1;33m                               :line[0m [36m148[0m,
+[1;33m                               :name[0m resource,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& handlers[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Create a Ring handler by combining several handlers into one.\n"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Returns routes for swagger-articats (ui & spec). Accepts an options map, with the\nfollowing options:\n\n**:ui**              Path for the swagger-ui (defaults to \"/\").\n                     Setting the value to nil will cause the swagger-ui not to be mounted\n\n**:spec**            Path for the swagger-spec (defaults to \"/swagger.json\")\n                     Setting the value to nil will cause the swagger-ui not to be mounted\n\n**:data**            Swagger data in the Ring-Swagger format.\n\n**:options**\n  **:ui**            Options to configure the ui\n  **:spec**          Options to configure the spec. Nada at the moment.\n\nExample options:\n\n  {:ui \"/api-docs\"\n   :spec \"/swagger.json\"\n   :options {:ui {:jsonEditor true}\n             :spec {}}\n   :data {:basePath \"/app\"\n          :info {:version \"1.0.0\"\n                 :title \"Sausages\"\n                 :description \"Sausage description\"\n                 :termsOfService \"http://helloreverb.com/terms/\"\n                 :contact {:name \"My API Team\"\n                           :email \"foo@example.com\"\n                           :url \"http://www.metosin.fi\"}\n                 :license {:name: \"Eclipse Public License\"\n                           :url: \"http://www.eclipse.org/legal/epl-v10.html\"}}\n          :tags [{:name \"sausages\", :description \"Sausage api-set\"}]}}"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/swagger.clj"[0m,
+[1;33m                               :line[0m [36m57[0m,
+[1;33m                               :name[0m swagger-routes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& handlers[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Routes without route-documentation. Can be used to wrap routes,\nnot satisfying compojure.api.routes/Routing -protocol."[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/core.clj"[0m,
+[1;33m                               :line[0m [36m40[0m,
+[1;33m                               :name[0m undocumented,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.upload,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:doc[0m [1;35m"Schema for file param created by ring.middleware.multipart-params.byte-array store.\n"[0m,
+[1;33m                               :file[0m [1;35m"ring/swagger/upload.clj"[0m,
+[1;33m                               :line[0m [36m27[0m,
+[1;33m                               :name[0m ByteArrayUpload,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Schema for file param created by ring.middleware.multipart-params.temp-file store.\n"[0m,
+[1;33m                               :file[0m [1;35m"ring/swagger/upload.clj"[0m,
+[1;33m                               :line[0m [36m20[0m,
+[1;33m                               :name[0m TempFileUpload,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler options[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware to parse multipart parameters from a request. Adds the\nfollowing keys to the request map:\n\n:multipart-params - a map of multipart parameters\n:params           - a merged map of all types of parameter\n\nThe following options are accepted\n\n:encoding          - character encoding to use for multipart parsing.\n                     Overrides the encoding specified in the request. If not\n                     specified, uses the encoding specified in a part named\n                     \"_charset_\", or the content type for each part, or\n                     request character encoding if the part has no encoding,\n                     or \"UTF-8\" if no request character encoding is set.\n\n:fallback-encoding - specifies the character encoding used in parsing if a\n                     part of the request does not specify encoding in its\n                     content type or no part named \"_charset_\" is present.\n                     Has no effect if :encoding is also set.\n\n:store             - a function that stores a file upload. The function\n                     should expect a map with :filename, :content-type and\n                     :stream keys, and its return value will be used as the\n                     value for the parameter in the multipart parameter map.\n                     The default storage function is the temp-file-store.\n\n:progress-fn       - a function that gets called during uploads. The\n                     function should expect four parameters: request,\n                     bytes-read, content-length, and item-count."[0m,
+[1;33m                               :file[0m [1;35m"ring/middleware/multipart_params.clj"[0m,
+[1;33m                               :line[0m [36m138[0m,
+[1;33m                               :name[0m wrap-multipart-params,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m compojure.api.validator,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mapi[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Validates an api. If the api is Swagger-enabled, the swagger-spec\nis requested and validated against the JSON Schema. Returns either\nthe (valid) api or throws an exception. Requires lazily the\nring.swagger.validator -namespace allowing it to be excluded, #227"[0m,
+[1;33m                               :file[0m [1;35m"compojure/api/validator.clj"[0m,
+[1;33m                               :line[0m [36m8[0m,
+[1;33m                               :name[0m validate,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m[1;31m][0m[1;31m}[0m,
+[1;33m :artifact-id[0m [1;35m"compojure-api"[0m,
+[1;33m :group-id[0m [1;35m"metosin"[0m,
+[1;33m :pom-str[0m [1;35m"<?xml version=\"1.0\" encoding=\"UTF-8\"?><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>metosin</groupId>\n  <artifactId>compojure-api</artifactId>\n  <packaging>jar</packaging>\n  <version>2.0.0-alpha27</version>\n  <name>compojure-api</name>\n  <description>Compojure Api</description>\n  <url>https://github.com/metosin/compojure-api</url>\n  <licenses>\n    <license>\n      <name>Eclipse Public License</name>\n      <url>http://www.eclipse.org/legal/epl-v10.html</url>\n      <distribution>repo</distribution>\n      <comments>same as Clojure</comments>\n    </license>\n  </licenses>\n  <scm>\n    <url>https://github.com/metosin/compojure-api</url>\n    <connection>scm:git:git://github.com/metosin/compojure-api.git</connection>\n    <developerConnection>scm:git:ssh://git@github.com/metosin/compojure-api.git</developerConnection>\n    <tag>e565483b4d28cfbc70be1542c0ec82390a318eaf</tag>\n  </scm>\n  <build>\n    <sourceDirectory>src</sourceDirectory>\n    <testSourceDirectory>test19</testSourceDirectory>\n    <resources>\n      <resource>\n        <directory>resources</directory>\n      </resource>\n    </resources>\n    <testResources>\n      <testResource>\n        <directory>resources</directory>\n      </testResource>\n    </testResources>\n    <directory>target</directory>\n    <outputDirectory>target/classes</outputDirectory>\n    <plugins>\n      <plugin>\n        <groupId>org.codehaus.mojo</groupId>\n        <artifactId>build-helper-maven-plugin</artifactId>\n        <version>1.7</version>\n        <executions>\n          <execution>\n            <id>add-test-source</id>\n            <phase>generate-test-sources</phase>\n            <goals>\n              <goal>add-test-source</goal>\n            </goals>\n            <configuration>\n              <sources>\n                <source>test</source>\n              </sources>\n            </configuration>\n          </execution>\n        </executions>\n      </plugin>\n    </plugins>\n  </build>\n  <repositories>\n    <repository>\n      <id>central</id>\n      <url>https://repo1.maven.org/maven2/</url>\n      <snapshots>\n        <enabled>false</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n    <repository>\n      <id>clojars</id>\n      <url>https://repo.clojars.org/</url>\n      <snapshots>\n        <enabled>true</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n  </repositories>\n  <dependencyManagement>\n    <dependencies/>\n  </dependencyManagement>\n  <dependencies>\n    <dependency>\n      <groupId>potemkin</groupId>\n      <artifactId>potemkin</artifactId>\n      <version>0.4.5</version>\n    </dependency>\n    <dependency>\n      <groupId>prismatic</groupId>\n      <artifactId>schema</artifactId>\n      <version>1.1.9</version>\n    </dependency>\n    <dependency>\n      <groupId>prismatic</groupId>\n      <artifactId>plumbing</artifactId>\n      <version>0.5.5</version>\n    </dependency>\n    <dependency>\n      <groupId>ikitommi</groupId>\n      <artifactId>linked</artifactId>\n      <version>1.3.1-alpha1</version>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>muuntaja</artifactId>\n      <version>0.6.1</version>\n    </dependency>\n    <dependency>\n      <groupId>com.fasterxml.jackson.datatype</groupId>\n      <artifactId>jackson-datatype-joda</artifactId>\n      <version>2.9.7</version>\n    </dependency>\n    <dependency>\n      <groupId>ring</groupId>\n      <artifactId>ring-core</artifactId>\n      <version>1.7.0</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>clj-time</artifactId>\n          <groupId>clj-time</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>commons-codec</artifactId>\n          <groupId>commons-codec</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>compojure</groupId>\n      <artifactId>compojure</artifactId>\n      <version>1.6.1</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>joda-time</artifactId>\n          <groupId>joda-time</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>spec-tools</artifactId>\n      <version>0.8.0</version>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>ring-http-response</artifactId>\n      <version>0.9.0</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>joda-time</artifactId>\n          <groupId>joda-time</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>ring-swagger-ui</artifactId>\n      <version>2.2.10</version>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>ring-swagger</artifactId>\n      <version>0.26.1</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>joda-time</artifactId>\n          <groupId>joda-time</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>clojure</artifactId>\n      <version>1.9.0</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>core.async</artifactId>\n      <version>0.4.474</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>javax.servlet</groupId>\n      <artifactId>javax.servlet-api</artifactId>\n      <version>4.0.1</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>peridot</groupId>\n      <artifactId>peridot</artifactId>\n      <version>0.5.1</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>clj-time</artifactId>\n          <groupId>clj-time</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>commons-codec</artifactId>\n          <groupId>commons-codec</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>midje</groupId>\n      <artifactId>midje</artifactId>\n      <version>1.9.4</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.namespace</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>specter</artifactId>\n          <groupId>com.rpl</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>commons-codec</artifactId>\n          <groupId>commons-codec</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>clj-time</artifactId>\n          <groupId>clj-time</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>com.rpl</groupId>\n      <artifactId>specter</artifactId>\n      <version>1.1.1</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>com.stuartsierra</groupId>\n      <artifactId>component</artifactId>\n      <version>0.3.2</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>jsonista</artifactId>\n      <version>0.2.2</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>reloaded.repl</groupId>\n      <artifactId>reloaded.repl</artifactId>\n      <version>0.2.4</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>muuntaja-msgpack</artifactId>\n      <version>0.6.1</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>muuntaja-yaml</artifactId>\n      <version>0.6.1</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.immutant</groupId>\n      <artifactId>immutant</artifactId>\n      <version>2.1.10</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>joda-time</artifactId>\n          <groupId>joda-time</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>slf4j-api</artifactId>\n          <groupId>org.slf4j</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>http-kit</groupId>\n      <artifactId>http-kit</artifactId>\n      <version>2.3.0</version>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>criterium</groupId>\n      <artifactId>criterium</artifactId>\n      <version>0.4.4</version>\n      <scope>test</scope>\n    </dependency>\n  </dependencies>\n</project>\n\n<!-- This file was autogenerated by Leiningen.\n  Please do not edit it directly; instead edit project.clj and regenerate it.\n  It should not be considered canonical data. For more information see\n  https://github.com/technomancy/leiningen -->\n"[0m,
+[1;33m :version[0m [1;35m"2.0.0-alpha27"[0m[1;31m}[0m

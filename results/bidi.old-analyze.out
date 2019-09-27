@@ -1,0 +1,128 @@
+--shelling--->: ("time" "clojure" "-m" "cljdoc.analysis.runner-ng" "{:project \"bidi\", :version \"2.1.3\", :jarpath \"http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.jar\", :pompath \"http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.pom\"}" :dir "./cljdoc/modules/analysis-runner")
+exit: 0
+out: {:project "bidi",
+ :version "2.1.3",
+ :jarpath "http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.jar",
+ :pompath "http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.pom"}
+Downloading remote jar...
+http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.pom nil
+Used dependencies for analysis:
+org.clojure/clojure 1.9.0
+  org.clojure/core.specs.alpha 0.1.24
+  org.clojure/spec.alpha 0.1.143
+criterium/criterium 0.4.3
+compojure/compojure 1.6.0-beta2
+  org.clojure/tools.macro 0.1.5
+  clout/clout 2.1.2
+    instaparse/instaparse 1.4.0
+  ring/ring-codec 1.0.1
+  ring/ring-core 1.6.0-beta6
+    commons-fileupload/commons-fileupload 1.3.2
+    commons-io/commons-io 2.5
+    clj-time/clj-time 0.11.0
+      joda-time/joda-time 2.8.2
+    crypto-random/crypto-random 1.2.0
+    crypto-equality/crypto-equality 1.0.0
+  medley/medley 0.8.4
+bidi /private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-bidi-2.1.38459813918525634181/downloaded.jar
+  prismatic/schema 1.1.3
+org.clojure/clojurescript 1.10.339
+  org.clojure/data.json 0.2.6
+  org.clojure/google-closure-library 0.0-20170809-b9c14c6b
+    org.clojure/google-closure-library-third-party 0.0-20170809-b9c14c6b
+  com.cognitect/transit-clj 0.8.309
+    com.cognitect/transit-java 0.8.332
+      commons-codec/commons-codec 1.10
+      com.fasterxml.jackson.core/jackson-core 2.8.7
+      org.msgpack/msgpack 0.6.12
+        com.googlecode.json-simple/json-simple 1.1.1
+        org.javassist/javassist 3.18.1-GA
+  org.clojure/tools.reader 1.3.0-alpha3
+  com.google.javascript/closure-compiler-unshaded v20180610
+    com.google.errorprone/error_prone_annotations 2.0.18
+    com.google.jsinterop/jsinterop-annotations 1.0.0
+    com.google.javascript/closure-compiler-externs v20180610
+    com.google.guava/guava 22.0
+      org.codehaus.mojo/animal-sniffer-annotations 1.14
+      com.google.j2objc/j2objc-annotations 1.1
+    args4j/args4j 2.33
+    com.google.protobuf/protobuf-java 3.0.2
+    com.google.code.findbugs/jsr305 3.0.1
+    com.google.code.gson/gson 2.7
+org.mozilla/rhino 1.7.7.1
+javax.servlet/javax.servlet-api 4.0.1
+codox/codox https://github.com/cljdoc/codox e0cd269
+  org.clojure/tools.namespace 0.2.11
+ring/ring-mock 0.3.0
+---------------------------------------------------------------------------
+Going to write analysis result to: /tmp/cljdoc/analysis-out/cljdoc-edn/bidi/bidi/2.1.3/cljdoc.edn
+Analyzing bidi clj
+exit-code 0 ---------------------------------------------------------------
+stdout --------------------------------------------------------------------
+Args:
+  - namespaces: "nil"
+  - jar-contents-path: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-bidi-2.1.38459813918525634181/contents"
+  - platf: "clj"
+  - file: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/bidi24808312794635824.edn"
+Analysing sources for platform "clj"
+Clojure version 1.9.0
+ClojureScript version 1.10.339
+Codox opts: {:language :clojure, :root-path "/private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T", :source-paths ["/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-bidi-2.1.38459813918525634181/contents"], :namespaces :all, :exception-handler #object[cljdoc.analysis.impl$codox_config$ex_handler__980 0xc2584d3 "cljdoc.analysis.impl$codox_config$ex_handler__980@c2584d3"], :metadata {}, :writer clojure.core/identity, :exclude-vars #"^(map)?->\p{Upper}"}
+Excluding var bidi.bidi/->Alternates
+Excluding var bidi.bidi/->IdentifiableHandler
+Excluding var bidi.bidi/->Route
+Excluding var bidi.bidi/->RoutesContext
+Excluding var bidi.bidi/->TaggedMatch
+Excluding var bidi.bidi/map->Alternates
+Excluding var bidi.bidi/map->IdentifiableHandler
+Excluding var bidi.bidi/map->Route
+Excluding var bidi.bidi/map->RoutesContext
+Excluding var bidi.bidi/map->TaggedMatch
+Excluding var bidi.ring/->Archive
+Excluding var bidi.ring/->Files
+Excluding var bidi.ring/->Redirect
+Excluding var bidi.ring/->Resources
+Excluding var bidi.ring/->ResourcesMaybe
+Excluding var bidi.ring/->WrapMiddleware
+Excluding var bidi.ring/map->Archive
+Excluding var bidi.ring/map->Files
+Excluding var bidi.ring/map->Redirect
+Excluding var bidi.ring/map->Resources
+Excluding var bidi.ring/map->ResourcesMaybe
+Excluding var bidi.ring/map->WrapMiddleware
+Excluding var bidi.vhosts/->Redirect
+Excluding var bidi.vhosts/->VHostsModel
+Excluding var bidi.vhosts/map->Redirect
+Excluding var bidi.vhosts/map->VHostsModel
+Writing /var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/bidi24808312794635824.edn
+
+---------------------------------------------------------------------------
+Analyzing bidi cljs
+exit-code 0 ---------------------------------------------------------------
+stdout --------------------------------------------------------------------
+Args:
+  - namespaces: "nil"
+  - jar-contents-path: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-bidi-2.1.38459813918525634181/contents"
+  - platf: "cljs"
+  - file: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/bidi8742903447794376964.edn"
+Analysing sources for platform "cljs"
+Clojure version 1.9.0
+ClojureScript version 1.10.339
+Codox opts: {:language :clojurescript, :root-path "/private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T", :source-paths ["/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-bidi-2.1.38459813918525634181/contents"], :namespaces :all, :exception-handler #object[cljdoc.analysis.impl$codox_config$ex_handler__980 0x37468787 "cljdoc.analysis.impl$codox_config$ex_handler__980@37468787"], :metadata {}, :writer clojure.core/identity, :exclude-vars #"^(map)?->\p{Upper}"}
+Excluding var bidi.bidi/->Alternates
+Excluding var bidi.bidi/->IdentifiableHandler
+Excluding var bidi.bidi/->Route
+Excluding var bidi.bidi/->RoutesContext
+Excluding var bidi.bidi/->TaggedMatch
+Excluding var bidi.bidi/map->Alternates
+Excluding var bidi.bidi/map->IdentifiableHandler
+Excluding var bidi.bidi/map->Route
+Excluding var bidi.bidi/map->RoutesContext
+Excluding var bidi.bidi/map->TaggedMatch
+Writing /var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/bidi8742903447794376964.edn
+
+---------------------------------------------------------------------------
+Analysis succeeded!
+
+err:        15.82 real        45.31 user         1.43 sys
+

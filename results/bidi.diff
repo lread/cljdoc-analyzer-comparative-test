@@ -1,0 +1,601 @@
+found results/old/analysis-out/cljdoc-edn/bidi/bidi/2.1.3/cljdoc.edn
+found results/new/analysis-out/cljdoc-edn/bidi/bidi/2.1.3/cljdoc.edn
+[1;31m{[0m[1;33m:analysis[0m [1;31m{[0m[1;35m"clj"[0m [1;31m[[0m[1;31m{[0m[1;33m:name[0m bidi.bidi,
+[1;33m                    :publics[0m [1;31m[[0m[30;42m+{:file "bidi/bidi.cljc", :line 481, :name Alternates, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& alts[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m492[0m,
+[1;33m                               :name[0m alts,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute[1;31m][0m[1;31m)[0m,
+[1;33m                               :deprecated[0m [1;36mtrue[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m562[0m,
+[1;33m                               :name[0m compile-route,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mk handler[1;31m][0m [1;31m[[0mhandler[1;31m][0m[1;31m)[0m,
+[1;33m                               :deprecated[0m [1;36mtrue[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m521[0m,
+[1;33m                               :name[0m handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/bidi.cljc",
+                                :line 512,
+                                :name IdentifiableHandler,
+                                :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mpath[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m187[0m,
+[1;33m                               :name[0m just-path,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mregex-pattern env[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Match the beginning of the :remainder value in m. If matched, update\nthe :remainder value in m with the path that remains after matching."[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m203[0m,
+[1;33m                               :name[0m match-beginning,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m[[0mpattern matched[1;31m][0m orig-env[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"A pair contains a pattern to match (either fully or partially) and an\nexpression yielding a handler. The second parameter is a map\ncontaining state, including the remaining path."[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m194[0m,
+[1;33m                               :name[0m match-pair,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute path & [1;31m{[0m[1;33m:as[0m options[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Given a route definition data structure and a path, return the\nhandler, if any, that matches the path."[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m385[0m,
+[1;33m                               :name[0m match-route,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute path options[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m380[0m,
+[1;33m                               :name[0m match-route*,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m183[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ m[1;31m][0m[1;31m)[0m, [1;33m:name[0m resolve-handler, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ m[1;31m][0m[1;31m)[0m, [1;33m:name[0m unresolve-handler, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Matched,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m404[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m,
+[1;33m                                          :doc[0m [1;35m"A protocol used in the expansion of possible matches that the pattern can match. This is used to gather all possible routes using route-seq below.\n"[0m,
+[1;33m                                          :name[0m matches,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Matches,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m34[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m encode-parameter, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m ParameterEncoding,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute handler & [1;31m{[0m[1;33m:as[0m params[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Given a route definition data structure, a handler and an option map, return a\npath that would route to the handler. The map must contain the values to any\nparameters required to create the path, and extra values are silently ignored."[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m391[0m,
+[1;33m                               :name[0m path-for,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m176[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ env[1;31m][0m[1;31m)[0m,
+[1;33m                                          :doc[0m [1;35m"Return a new state if this pattern matches the given state, or\nfalsy otherwise. If a new state is returned it will usually have the\nrest of the path to match in the :remainder entry."[0m,
+[1;33m                                          :name[0m match-pattern,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ m[1;31m][0m[1;31m)[0m, [1;33m:name[0m unmatch-pattern, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Pattern,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m71[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ s[1;31m][0m[1;31m)[0m, [1;33m:name[0m matches?, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m param-key, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m segment-regex-group, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m transform-param, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ params[1;31m][0m[1;31m)[0m, [1;33m:name[0m unmatch-segment, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m PatternSegment,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/bidi.cljc", :line 419, :name Route, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m[[0mpattern matched[1;31m][0m ctx[1;31m][0m [1;31m[[0mroute[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m424[0m,
+[1;33m                               :name[0m route-seq,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m465[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m,
+[1;33m                                          :doc[0m [1;35m"Provide a bidi route structure. Returns a vector pair,\nthe first element is the pattern, the second element is the matched\nroute or routes."[0m,
+[1;33m                                          :name[0m routes,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m RouteProvider,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroutes context[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Wrap a Matched such that a successful match will merge the given\ncontext with the match-context. The merge is such that where there\nis a conflict, the inner sub-tree overrides the outer container."[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m546[0m,
+[1;33m                               :name[0m routes-context,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/bidi.cljc", :line 533, :name RoutesContext, :type :var}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m421[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ context[1;31m][0m[1;31m)[0m,
+[1;33m                                          :doc[0m [1;35m"Return a sequence of leaves\n"[0m,
+[1;33m                                          :name[0m gather,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m RouteSeq,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m211[0m,
+[1;33m                               :name[0m succeed,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmatched tag[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m509[0m,
+[1;33m                               :name[0m tag,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/bidi.cljc", :line 498, :name TaggedMatch, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mv m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m324[0m,
+[1;33m                               :name[0m unmatch-pair,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mstring[1;31m][0m [1;31m[[0mstring encoding[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :name[0m url-decode,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mstring[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m8[0m,
+[1;33m                               :name[0m url-encode,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0ms[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Function for creating a UUID of the appropriate type for the platform.\nNote that this function should _only_ be used in route patterns as, at least\nin the case of ClojureScript, it does not validate that the input string is\nactually a valid UUID (this is handled by the route matching logic)."[0m,
+[1;33m                               :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                               :line[0m [36m22[0m,
+[1;33m                               :name[0m uuid,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m bidi.ring,
+[1;33m                    :publics[0m [1;31m[[0m[30;42m+{:file "bidi/ring.cljc", :line 159, :name Archive, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m179[0m,
+[1;33m                               :name[0m archive,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/ring.cljc", :line 139, :name Files, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m152[0m,
+[1;33m                               :name[0m files,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute handler-fn[1;31m][0m [1;31m[[0mroute[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Create a Ring handler from the route definition data\nstructure. Matches a handler from the uri in the request, and invokes\nit with the request as a parameter."[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m32[0m,
+[1;33m                               :name[0m make-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/ring.cljc", :line 58, :name Redirect, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mtarget[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m81[0m,
+[1;33m                               :name[0m redirect,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mtarget[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m85[0m,
+[1;33m                               :name[0m redirect-after-post,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/ring.cljc", :line 91, :name Resources, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m107[0m,
+[1;33m                               :name[0m resources,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m133[0m,
+[1;33m                               :name[0m resources-maybe,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/ring.cljc", :line 119, :name ResourcesMaybe, :type :var}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m16[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ req match-context[1;31m][0m[1;31m)[0m,
+[1;33m                                          :doc[0m [1;35m"Handle a Ring request, but optionally utilize any context that was\ncollected in the process of matching the handler."[0m,
+[1;33m                                          :name[0m request,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Ring,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmatched middleware[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                               :line[0m [36m193[0m,
+[1;33m                               :name[0m wrap-middleware,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/ring.cljc", :line 185, :name WrapMiddleware, :type :var}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m bidi.schema,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                               :line[0m [36m31[0m,
+[1;33m                               :name[0m AlternatesSet,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                               :line[0m [36m34[0m,
+[1;33m                               :name[0m DeprecatedAlternates,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m23[0m, [1;33m:name[0m GeneralGuard, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m49[0m, [1;33m:name[0m Matched, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m20[0m, [1;33m:name[0m MethodGuard, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m9[0m, [1;33m:name[0m Path, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m38[0m, [1;33m:name[0m Pattern, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m14[0m, [1;33m:name[0m PatternSegment, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m59[0m, [1;33m:name[0m RoutePair, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                               :line[0m [36m26[0m,
+[1;33m                               :name[0m SegmentedPattern,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mqual[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                               :line[0m [36m11[0m,
+[1;33m                               :name[0m valid-qualifier-function?,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m bidi.verbose,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfragment & children[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/verbose.cljc"[0m,
+[1;33m                               :line[0m [36m8[0m,
+[1;33m                               :name[0m branch,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfragment name[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/verbose.cljc"[0m,
+[1;33m                               :line[0m [36m5[0m,
+[1;33m                               :name[0m leaf,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mname[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/verbose.cljc"[0m,
+[1;33m                               :line[0m [36m14[0m,
+[1;33m                               :name[0m param,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m bidi.vhosts,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"bidi/vhosts.clj"[0m, [1;33m:line[0m [36m27[0m, [1;33m:name[0m coerce-to-vhost, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m38[0m,
+[1;33m                               :name[0m coerce-to-vhosts,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mvhosts-model req[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m157[0m,
+[1;33m                               :name[0m find-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mreq[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Get the real host from a request, taking into account reverse-proxy headers\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m94[0m,
+[1;33m                               :name[0m host,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/vhosts.clj"[0m, [1;33m:line[0m [36m149[0m, [1;33m:name[0m host-for, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/vhosts.clj"[0m, [1;33m:line[0m [36m151[0m, [1;33m:name[0m href-for, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mvhosts-model[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m185[0m,
+[1;33m                               :name[0m make-default-not-found-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mvhosts-model[1;31m][0m
+[1;31m                                          [[0mvhosts-model handler-fn[1;31m][0m
+[1;31m                                          [[0mvhosts-model handler-fn not-found[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m193[0m,
+[1;33m                               :name[0m make-handler,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/vhosts.clj"[0m, [1;33m:line[0m [36m148[0m, [1;33m:name[0m path-for, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mvhosts-model vhost[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m100[0m,
+[1;33m                               :name[0m prioritize-vhosts,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/vhosts.clj", :line 210, :name Redirect, :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mtarget & [1;31m[[0mopts[1;31m][0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m234[0m,
+[1;33m                               :name[0m redirect,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfrom to[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m75[0m,
+[1;33m                               :name[0m relativize,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mreq[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Get the real scheme (as a keyword) from a request, taking into\naccount reverse-proxy headers"[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m87[0m,
+[1;33m                               :name[0m scheme,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"bidi/vhosts.clj"[0m, [1;33m:line[0m [36m150[0m, [1;33m:name[0m scheme-for, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0muri[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m22[0m,
+[1;33m                               :name[0m uri->host,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:deprecated[0m [1;36mtrue[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m155[0m,
+[1;33m                               :name[0m uri-for,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mprioritized-vhosts
+                                           handler
+                                           &
+[1;31m                                           [[0m[1;31m{[0m[1;33m:as[0m options,
+[1;33m                                             :keys[0m [1;31m[[0mrequest
+                                                    vhost
+                                                    route-params
+                                                    query-params
+                                                    prefer
+                                                    fragment[1;31m][0m,
+[1;33m                                             :or[0m [1;31m{[0mprefer [1;33m:local[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Return URI info as a map.\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m104[0m,
+[1;33m                               :name[0m uri-info,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m13[0m,
+[1;33m                               :name[0m VHost,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mvhosts request[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m175[0m,
+[1;33m                               :name[0m vhosts->roots,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& vhosts-with-routes[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m53[0m,
+[1;33m                               :name[0m vhosts-model,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "bidi/vhosts.clj", :line 51, :name VHostsModel, :type :var}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                               :file[0m [1;35m"bidi/vhosts.clj"[0m,
+[1;33m                               :line[0m [36m18[0m,
+[1;33m                               :name[0m VHostWithRoutes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m[1;31m][0m,
+[1;35m            "cljs"[0m [1;31m[[0m[1;31m{[0m[1;33m:name[0m bidi.bidi,
+[1;33m                     :publics[0m [1;31m([0m[1;31m{[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m, [1;33m:line[0m [36m481[0m, [1;33m:name[0m Alternates, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m& alts[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m492[0m,
+[1;33m                                :name[0m alts,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute[1;31m][0m[1;31m)[0m,
+[1;33m                                :deprecated[0m [1;36mtrue[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m562[0m,
+[1;33m                                :name[0m compile-route,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mk handler[1;31m][0m [1;31m[[0mhandler[1;31m][0m[1;31m)[0m,
+[1;33m                                :deprecated[0m [1;36mtrue[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m521[0m,
+[1;33m                                :name[0m handler,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m512[0m,
+[1;33m                                :name[0m IdentifiableHandler,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mpath[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m187[0m,
+[1;33m                                :name[0m just-path,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mregex-pattern env[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Match the beginning of the :remainder value in m. If matched, update\nthe :remainder value in m with the path that remains after matching."[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m203[0m,
+[1;33m                                :name[0m match-beginning,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m[[0mpattern matched[1;31m][0m orig-env[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"A pair contains a pattern to match (either fully or partially) and an\nexpression yielding a handler. The second parameter is a map\ncontaining state, including the remaining path."[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m194[0m,
+[1;33m                                :name[0m match-pair,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute path & [1;31m{[0m[1;33m:as[0m options[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Given a route definition data structure and a path, return the\nhandler, if any, that matches the path."[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m385[0m,
+[1;33m                                :name[0m match-route,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute path options[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m380[0m,
+[1;33m                                :name[0m match-route*,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m183[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ m[1;31m][0m[1;31m)[0m, [1;33m:name[0m resolve-handler, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ m[1;31m][0m[1;31m)[0m, [1;33m:name[0m unresolve-handler, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m Matched,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m404[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m,
+[1;33m                                           :doc[0m [1;35m"A protocol used in the expansion of possible matches that the pattern can match. This is used to gather all possible routes using route-seq below.\n"[0m,
+[1;33m                                           :name[0m matches,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m Matches,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m34[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m encode-parameter, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m ParameterEncoding,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute handler & [1;31m{[0m[1;33m:as[0m params[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Given a route definition data structure, a handler and an option map, return a\npath that would route to the handler. The map must contain the values to any\nparameters required to create the path, and extra values are silently ignored."[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m391[0m,
+[1;33m                                :name[0m path-for,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m176[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ env[1;31m][0m[1;31m)[0m,
+[1;33m                                           :doc[0m [1;35m"Return a new state if this pattern matches the given state, or\nfalsy otherwise. If a new state is returned it will usually have the\nrest of the path to match in the :remainder entry."[0m,
+[1;33m                                           :name[0m match-pattern,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ m[1;31m][0m[1;31m)[0m, [1;33m:name[0m unmatch-pattern, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m Pattern,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m71[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ s[1;31m][0m[1;31m)[0m, [1;33m:name[0m matches?, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m param-key, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m segment-regex-group, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m, [1;33m:name[0m transform-param, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ params[1;31m][0m[1;31m)[0m,
+[1;33m                                           :name[0m unmatch-segment,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m PatternSegment,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m, [1;33m:line[0m [36m419[0m, [1;33m:name[0m Route, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m[[0mpattern matched[1;31m][0m ctx[1;31m][0m [1;31m[[0mroute[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m424[0m,
+[1;33m                                :name[0m route-seq,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m465[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m,
+[1;33m                                           :doc[0m [1;35m"Provide a bidi route structure. Returns a vector pair,\nthe first element is the pattern, the second element is the matched\nroute or routes."[0m,
+[1;33m                                           :name[0m routes,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m RouteProvider,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroutes context[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Wrap a Matched such that a successful match will merge the given\ncontext with the match-context. The merge is such that where there\nis a conflict, the inner sub-tree overrides the outer container."[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m546[0m,
+[1;33m                                :name[0m routes-context,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m, [1;33m:line[0m [36m533[0m, [1;33m:name[0m RoutesContext, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m421[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ context[1;31m][0m[1;31m)[0m,
+[1;33m                                           :doc[0m [1;35m"Return a sequence of leaves\n"[0m,
+[1;33m                                           :name[0m gather,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m RouteSeq,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler m[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m211[0m,
+[1;33m                                :name[0m succeed,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mmatched tag[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m509[0m,
+[1;33m                                :name[0m tag,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/bidi.cljc"[0m, [1;33m:line[0m [36m498[0m, [1;33m:name[0m TaggedMatch, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mv m[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m324[0m,
+[1;33m                                :name[0m unmatch-pair,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mstring[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m16[0m,
+[1;33m                                :name[0m url-decode,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mstring[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m8[0m,
+[1;33m                                :name[0m url-encode,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0ms[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Function for creating a UUID of the appropriate type for the platform.\nNote that this function should _only_ be used in route patterns as, at least\nin the case of ClojureScript, it does not validate that the input string is\nactually a valid UUID (this is handled by the route matching logic)."[0m,
+[1;33m                                :file[0m [1;35m"bidi/bidi.cljc"[0m,
+[1;33m                                :line[0m [36m22[0m,
+[1;33m                                :name[0m uuid,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:name[0m bidi.ring,
+[1;33m                     :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroute handler-fn[1;31m][0m [1;31m[[0mroute[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Create a Ring handler from the route definition data\nstructure. Matches a handler from the uri in the request, and invokes\nit with the request as a parameter."[0m,
+[1;33m                                :file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                                :line[0m [36m32[0m,
+[1;33m                                :name[0m make-handler,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/ring.cljc"[0m,
+[1;33m                                :line[0m [36m16[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ req match-context[1;31m][0m[1;31m)[0m,
+[1;33m                                           :doc[0m [1;35m"Handle a Ring request, but optionally utilize any context that was\ncollected in the process of matching the handler."[0m,
+[1;33m                                           :name[0m request,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m Ring,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:name[0m bidi.router,
+[1;33m                     :publics[0m [1;31m([0m[1;31m{[0m[1;33m:file[0m [1;35m"bidi/router.cljs"[0m,
+[1;33m                                :line[0m [36m8[0m,
+[1;33m                                :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ location[1;31m][0m[1;31m)[0m,
+[1;33m                                           :name[0m replace-location!,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                          {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ location[1;31m][0m[1;31m)[0m,
+[1;33m                                           :name[0m set-location!,
+[1;33m                                           :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                                :name[0m Router,
+[1;33m                                :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mroutes
+[1;31m                                            {[0m[1;33m:keys[0m [1;31m[[0mon-navigate default-location[1;31m][0m,
+[1;33m                                             :or[0m [1;31m{[0mon-navigate [1;31m([0m[1;34mconstantly[0m [1;30mnil[0m[1;31m)[0m[1;31m}[0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                                :doc[0m [1;35m"Starts up a Bidi router based on Google Closure's 'History'\n\nTypes:\n\n  Location :- {:handler ...\n               :route-params {...}}\n\nParameters:\n\n  routes :- a Bidi route structure\n  on-navigate :- 0-arg function, accepting a Location\n  default-location :- Location to default to if the current token doesn't match a route\n\nReturns :- Router\n\nExample usage:\n\n  (require '[bidi.router :as br])\n\n  (let [!location (atom nil)\n        router (br/start-router! [\"\" {\"/\" ::home-page\n                                        \"/page2\" ::page2}]\n                                 {:on-navigate (fn [location]\n                                                 (reset! !location location))\n                                  :default-location {:handler ::home-page}})]\n\n    ...\n\n    (br/set-location! router {:handler ::page2}))"[0m,
+[1;33m                                :file[0m [1;35m"bidi/router.cljs"[0m,
+[1;33m                                :line[0m [36m12[0m,
+[1;33m                                :name[0m start-router!,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:name[0m bidi.schema,
+[1;33m                     :publics[0m [1;31m([0m[1;31m{[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                                :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                                :line[0m [36m31[0m,
+[1;33m                                :name[0m AlternatesSet,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                                :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                                :line[0m [36m34[0m,
+[1;33m                                :name[0m DeprecatedAlternates,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m23[0m, [1;33m:name[0m GeneralGuard, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m49[0m, [1;33m:name[0m Matched, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m20[0m, [1;33m:name[0m MethodGuard, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m9[0m, [1;33m:name[0m Path, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m38[0m, [1;33m:name[0m Pattern, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                                :line[0m [36m14[0m,
+[1;33m                                :name[0m PatternSegment,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:file[0m [1;35m"bidi/schema.cljc"[0m, [1;33m:line[0m [36m59[0m, [1;33m:name[0m RoutePair, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:doc[0m [1;35m"\n"[0m,
+[1;33m                                :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                                :line[0m [36m26[0m,
+[1;33m                                :name[0m SegmentedPattern,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mqual[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/schema.cljc"[0m,
+[1;33m                                :line[0m [36m11[0m,
+[1;33m                                :name[0m valid-qualifier-function?,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                    {[0m[1;33m:name[0m bidi.verbose,
+[1;33m                     :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfragment & children[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/verbose.cljc"[0m,
+[1;33m                                :line[0m [36m8[0m,
+[1;33m                                :name[0m branch,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mfragment name[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/verbose.cljc"[0m,
+[1;33m                                :line[0m [36m5[0m,
+[1;33m                                :name[0m leaf,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                               {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mname[1;31m][0m[1;31m)[0m,
+[1;33m                                :file[0m [1;35m"bidi/verbose.cljc"[0m,
+[1;33m                                :line[0m [36m14[0m,
+[1;33m                                :name[0m param,
+[1;33m                                :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m[1;31m][0m[1;31m}[0m,
+[1;33m :artifact-id[0m [1;35m"bidi"[0m,
+[1;33m :group-id[0m [1;35m"bidi"[0m,
+[1;33m :pom-str[0m [1;35m"<?xml version=\"1.0\" encoding=\"UTF-8\"?><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>bidi</groupId>\n  <artifactId>bidi</artifactId>\n  <packaging>jar</packaging>\n  <version>2.1.3</version>\n  <name>bidi</name>\n  <description>Bidirectional URI routing</description>\n  <url>https://github.com/juxt/bidi</url>\n  <licenses>\n    <license>\n      <name>The MIT License</name>\n      <url>http://opensource.org/licenses/MIT</url>\n    </license>\n  </licenses>\n  <scm>\n    <url>https://github.com/juxt/bidi</url>\n    <connection>scm:git:git://github.com/juxt/bidi.git</connection>\n    <developerConnection>scm:git:ssh://git@github.com/juxt/bidi.git</developerConnection>\n    <tag>d1bfcc9c4fe247b8ada19cd7ee25acd81dd93f26</tag>\n  </scm>\n  <build>\n    <sourceDirectory>src</sourceDirectory>\n    <testSourceDirectory>test</testSourceDirectory>\n    <resources>\n      <resource>\n        <directory>resources</directory>\n      </resource>\n    </resources>\n    <testResources>\n      <testResource>\n        <directory>test-resources</directory>\n      </testResource>\n      <testResource>\n        <directory>resources</directory>\n      </testResource>\n    </testResources>\n    <directory>target</directory>\n    <outputDirectory>target/classes</outputDirectory>\n    <plugins/>\n  </build>\n  <repositories>\n    <repository>\n      <id>central</id>\n      <url>https://repo1.maven.org/maven2/</url>\n      <snapshots>\n        <enabled>false</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n    <repository>\n      <id>clojars</id>\n      <url>https://repo.clojars.org/</url>\n      <snapshots>\n        <enabled>true</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n  </repositories>\n  <dependencyManagement>\n    <dependencies/>\n  </dependencyManagement>\n  <dependencies>\n    <dependency>\n      <groupId>prismatic</groupId>\n      <artifactId>schema</artifactId>\n      <version>1.1.3</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>ring</groupId>\n      <artifactId>ring-core</artifactId>\n      <version>1.5.0</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n        <exclusion>\n          <artifactId>clojure</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n    </dependency>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>clojure</artifactId>\n      <version>1.8.0</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>clojurescript</artifactId>\n      <version>1.9.293</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.clojure</groupId>\n      <artifactId>tools.reader</artifactId>\n      <version>1.0.0-beta4</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>ring</groupId>\n      <artifactId>ring-mock</artifactId>\n      <version>0.3.0</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>compojure</groupId>\n      <artifactId>compojure</artifactId>\n      <version>1.6.0-beta2</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>criterium</groupId>\n      <artifactId>criterium</artifactId>\n      <version>0.4.3</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n    <dependency>\n      <groupId>org.mozilla</groupId>\n      <artifactId>rhino</artifactId>\n      <version>1.7.7.1</version>\n      <exclusions>\n        <exclusion>\n          <artifactId>tools.reader</artifactId>\n          <groupId>org.clojure</groupId>\n        </exclusion>\n      </exclusions>\n      <scope>test</scope>\n    </dependency>\n  </dependencies>\n</project>\n\n<!-- This file was autogenerated by Leiningen.\n  Please do not edit it directly; instead edit project.clj and regenerate it.\n  It should not be considered canonical data. For more information see\n  https://github.com/technomancy/leiningen -->\n"[0m,
+[1;33m :version[0m [1;35m"2.1.3"[0m[1;31m}[0m

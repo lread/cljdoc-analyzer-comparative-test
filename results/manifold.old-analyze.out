@@ -1,0 +1,77 @@
+--shelling--->: ("time" "clojure" "-m" "cljdoc.analysis.runner-ng" "{:project \"manifold\", :version \"0.1.8\", :jarpath \"http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.jar\", :pompath \"http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.pom\"}" :dir "./cljdoc/modules/analysis-runner")
+exit: 0
+out: {:project "manifold",
+ :version "0.1.8",
+ :jarpath
+ "http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.jar",
+ :pompath
+ "http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.pom"}
+Downloading remote jar...
+http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.pom nil
+Used dependencies for analysis:
+org.clojure/clojure 1.9.0
+  org.clojure/core.specs.alpha 0.1.24
+  org.clojure/spec.alpha 0.1.143
+criterium/criterium 0.4.4
+org.clojure/clojurescript 1.10.520
+  org.clojure/data.json 0.2.6
+  org.clojure/google-closure-library 0.0-20170809-b9c14c6b
+    org.clojure/google-closure-library-third-party 0.0-20170809-b9c14c6b
+  org.mozilla/rhino 1.7R5
+  com.cognitect/transit-clj 0.8.309
+    com.cognitect/transit-java 0.8.332
+      commons-codec/commons-codec 1.10
+      com.fasterxml.jackson.core/jackson-core 2.8.7
+      org.msgpack/msgpack 0.6.12
+        com.googlecode.json-simple/json-simple 1.1.1
+        org.javassist/javassist 3.18.1-GA
+  org.clojure/tools.reader 1.3.0
+  com.google.javascript/closure-compiler-unshaded v20180805
+    com.google.jsinterop/jsinterop-annotations 1.0.0
+    com.google.javascript/closure-compiler-externs v20180805
+    com.google.guava/guava 25.1-jre
+      com.google.errorprone/error_prone_annotations 2.1.3
+      org.codehaus.mojo/animal-sniffer-annotations 1.14
+      com.google.j2objc/j2objc-annotations 1.1
+      org.checkerframework/checker-qual 2.0.0
+      com.google.code.findbugs/jsr305 3.0.2
+    args4j/args4j 2.0.26
+    com.google.protobuf/protobuf-java 3.0.2
+    com.google.code.gson/gson 2.7
+manifold /private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-manifold-0.1.83222701047032949343/downloaded.jar
+  org.clojure/tools.logging 0.3.1
+  io.aleph/dirigiste 0.1.5
+  riddley/riddley 0.1.14
+javax.servlet/javax.servlet-api 4.0.1
+codox/codox https://github.com/cljdoc/codox e0cd269
+  org.clojure/tools.namespace 0.2.11
+org.clojure/core.async 0.4.474
+  org.clojure/tools.analyzer.jvm 0.7.0
+    org.clojure/tools.analyzer 0.6.9
+    org.clojure/core.memoize 0.5.9
+      org.clojure/core.cache 0.6.5
+        org.clojure/data.priority-map 0.0.7
+    org.ow2.asm/asm-all 4.2
+---------------------------------------------------------------------------
+Going to write analysis result to: /tmp/cljdoc/analysis-out/cljdoc-edn/manifold/manifold/0.1.8/cljdoc.edn
+Analyzing manifold clj
+exit-code 0 ---------------------------------------------------------------
+stdout --------------------------------------------------------------------
+Args:
+  - namespaces: "[manifold.deferred manifold.stream manifold.time manifold.bus manifold.executor]"
+  - jar-contents-path: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-manifold-0.1.83222701047032949343/contents"
+  - platf: "clj"
+  - file: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/manifold6802756587733542815.edn"
+Analysing sources for platform "clj"
+Clojure version 1.9.0
+ClojureScript version 1.10.520
+Codox opts: {:language :clojure, :root-path "/private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T", :source-paths ["/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-manifold-0.1.83222701047032949343/contents"], :namespaces [manifold.deferred manifold.stream manifold.time manifold.bus manifold.executor], :exception-handler #object[cljdoc.analysis.impl$codox_config$ex_handler__980 0x12fe1f28 "cljdoc.analysis.impl$codox_config$ex_handler__980@12fe1f28"], :metadata {}, :writer clojure.core/identity, :exclude-vars #"^(map)?->\p{Upper}"}
+Excluding var manifold.stream/->BufferedStream
+Excluding var manifold.bus/->Wrapper
+Writing /var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/manifold6802756587733542815.edn
+
+---------------------------------------------------------------------------
+Analysis succeeded!
+
+err:        11.59 real        38.60 user         1.08 sys
+

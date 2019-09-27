@@ -1,0 +1,272 @@
+--shelling--->: ("time" "clojure" "-m" "cljdoc.analysis.runner-ng" "{:project \"amazonica\", :version \"0.3.146\", :jarpath \"http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.jar\", :pompath \"http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.pom\"}" :dir "./cljdoc/modules/analysis-runner")
+exit: 0
+out: {:project "amazonica",
+ :version "0.3.146",
+ :jarpath
+ "http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.jar",
+ :pompath
+ "http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.pom"}
+Downloading remote jar...
+http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.pom nil
+Used dependencies for analysis:
+org.clojure/clojure 1.9.0
+  org.clojure/core.specs.alpha 0.1.24
+  org.clojure/spec.alpha 0.1.143
+org.clojure/clojurescript 1.10.520
+  org.clojure/data.json 0.2.6
+  org.clojure/google-closure-library 0.0-20170809-b9c14c6b
+    org.clojure/google-closure-library-third-party 0.0-20170809-b9c14c6b
+  org.mozilla/rhino 1.7R5
+  com.cognitect/transit-clj 0.8.309
+    com.cognitect/transit-java 0.8.332
+      com.fasterxml.jackson.core/jackson-core 2.8.7
+      org.msgpack/msgpack 0.6.12
+        com.googlecode.json-simple/json-simple 1.1.1
+        org.javassist/javassist 3.18.1-GA
+  org.clojure/tools.reader 1.3.0
+  com.google.javascript/closure-compiler-unshaded v20180805
+    com.google.jsinterop/jsinterop-annotations 1.0.0
+    com.google.javascript/closure-compiler-externs v20180805
+    args4j/args4j 2.0.26
+    com.google.protobuf/protobuf-java 3.0.2
+    com.google.code.gson/gson 2.7
+amazonica /private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-amazonica-0.3.1467961454267569131999/downloaded.jar
+  com.amazonaws/amazon-kinesis-client 1.9.3
+    org.apache.commons/commons-lang3 3.7
+    com.google.guava/guava 26.0-jre
+      com.google.errorprone/error_prone_annotations 2.1.3
+      org.codehaus.mojo/animal-sniffer-annotations 1.14
+      com.google.j2objc/j2objc-annotations 1.1
+      org.checkerframework/checker-qual 2.5.2
+      com.google.code.findbugs/jsr305 3.0.2
+  joda-time/joda-time 2.9.6
+  com.amazonaws/aws-java-sdk 1.11.602
+    com.amazonaws/aws-java-sdk-cloudsearch 1.11.602
+    com.amazonaws/aws-java-sdk-transcribe 1.11.602
+    com.amazonaws/aws-java-sdk-iotanalytics 1.11.602
+    com.amazonaws/aws-java-sdk-athena 1.11.602
+    com.amazonaws/aws-java-sdk-clouddirectory 1.11.602
+    com.amazonaws/aws-java-sdk-autoscaling 1.11.602
+    com.amazonaws/aws-java-sdk-mechanicalturkrequester 1.11.602
+    com.amazonaws/aws-java-sdk-signer 1.11.602
+    com.amazonaws/aws-java-sdk-licensemanager 1.11.602
+    com.amazonaws/aws-java-sdk-opsworks 1.11.602
+    com.amazonaws/aws-java-sdk-cloud9 1.11.602
+    com.amazonaws/aws-java-sdk-iam 1.11.602
+    com.amazonaws/aws-java-sdk-translate 1.11.602
+    com.amazonaws/aws-java-sdk-support 1.11.602
+    com.amazonaws/aws-java-sdk-sns 1.11.602
+    com.amazonaws/aws-java-sdk-docdb 1.11.602
+    com.amazonaws/aws-java-sdk-glacier 1.11.602
+    com.amazonaws/aws-java-sdk-cloudformation 1.11.602
+    com.amazonaws/aws-java-sdk-mediapackage 1.11.602
+    com.amazonaws/aws-java-sdk-discovery 1.11.602
+    com.amazonaws/aws-java-sdk-fms 1.11.602
+    com.amazonaws/aws-java-sdk-rds 1.11.602
+    com.amazonaws/aws-java-sdk-sts 1.11.602
+    com.amazonaws/aws-java-sdk-autoscalingplans 1.11.602
+    com.amazonaws/aws-java-sdk-chime 1.11.602
+    com.amazonaws/aws-java-sdk-apigatewayv2 1.11.602
+    com.amazonaws/aws-java-sdk-rdsdata 1.11.602
+    com.amazonaws/aws-java-sdk-storagegateway 1.11.602
+    com.amazonaws/aws-java-sdk-codestar 1.11.602
+    com.amazonaws/aws-java-sdk-pi 1.11.602
+    com.amazonaws/aws-java-sdk-macie 1.11.602
+    com.amazonaws/aws-java-sdk-ecr 1.11.602
+    com.amazonaws/aws-java-sdk-iotjobsdataplane 1.11.602
+    com.amazonaws/aws-java-sdk-iotthingsgraph 1.11.602
+    com.amazonaws/aws-java-sdk-datasync 1.11.602
+    com.amazonaws/aws-java-sdk-greengrass 1.11.602
+    com.amazonaws/aws-java-sdk-sagemaker 1.11.602
+    com.amazonaws/aws-java-sdk-elasticsearch 1.11.602
+    com.amazonaws/aws-java-sdk-quicksight 1.11.602
+    com.amazonaws/aws-java-sdk-sqs 1.11.602
+    com.amazonaws/aws-java-sdk-waf 1.11.602
+    com.amazonaws/aws-java-sdk-organizations 1.11.602
+    com.amazonaws/aws-java-sdk-appsync 1.11.602
+    com.amazonaws/aws-java-sdk-cloudhsmv2 1.11.602
+    com.amazonaws/aws-java-sdk-cloudfront 1.11.602
+    com.amazonaws/aws-java-sdk-datapipeline 1.11.602
+    com.amazonaws/aws-java-sdk-lightsail 1.11.602
+    com.amazonaws/aws-java-sdk-neptune 1.11.602
+    com.amazonaws/aws-java-sdk-events 1.11.602
+    com.amazonaws/aws-java-sdk-comprehendmedical 1.11.602
+    com.amazonaws/aws-java-sdk-cloudhsm 1.11.602
+    com.amazonaws/aws-java-sdk-iot1clickprojects 1.11.602
+    com.amazonaws/aws-java-sdk-lexmodelbuilding 1.11.602
+    com.amazonaws/aws-java-sdk-glue 1.11.602
+    com.amazonaws/aws-java-sdk-s3control 1.11.602
+    com.amazonaws/aws-java-sdk-models 1.11.602
+    com.amazonaws/aws-java-sdk-pinpointsmsvoice 1.11.602
+    com.amazonaws/aws-java-sdk-iotevents 1.11.602
+    com.amazonaws/aws-java-sdk-emr 1.11.602
+    com.amazonaws/aws-java-sdk-directory 1.11.602
+    com.amazonaws/aws-java-sdk-codecommit 1.11.602
+    com.amazonaws/aws-java-sdk-inspector 1.11.602
+    com.amazonaws/aws-java-sdk-costandusagereport 1.11.602
+    com.amazonaws/aws-java-sdk-resourcegroupstaggingapi 1.11.602
+    com.amazonaws/aws-java-sdk-groundstation 1.11.602
+    com.amazonaws/aws-java-sdk-alexaforbusiness 1.11.602
+    com.amazonaws/aws-java-sdk-applicationinsights 1.11.602
+    com.amazonaws/aws-java-sdk-directconnect 1.11.602
+    com.amazonaws/aws-java-sdk-elastictranscoder 1.11.602
+    com.amazonaws/aws-java-sdk-simpleworkflow 1.11.602
+    com.amazonaws/aws-java-sdk-pinpoint 1.11.602
+    com.amazonaws/aws-java-sdk-marketplaceentitlement 1.11.602
+    com.amazonaws/aws-java-sdk-fsx 1.11.602
+    com.amazonaws/aws-java-sdk-worklink 1.11.602
+    com.amazonaws/aws-java-sdk-ses 1.11.602
+    com.amazonaws/aws-java-sdk-migrationhub 1.11.602
+    com.amazonaws/aws-java-sdk-swf-libraries 1.11.22
+    com.amazonaws/aws-java-sdk-codepipeline 1.11.602
+    com.amazonaws/aws-java-sdk-efs 1.11.602
+    com.amazonaws/aws-java-sdk-batch 1.11.602
+    com.amazonaws/aws-java-sdk-config 1.11.602
+    com.amazonaws/aws-java-sdk-sagemakerruntime 1.11.602
+    com.amazonaws/aws-java-sdk-medialive 1.11.602
+    com.amazonaws/aws-java-sdk-marketplacemeteringservice 1.11.602
+    com.amazonaws/aws-java-sdk-dms 1.11.602
+    com.amazonaws/aws-java-sdk-mediaconvert 1.11.602
+    com.amazonaws/aws-java-sdk-costexplorer 1.11.602
+    com.amazonaws/aws-java-sdk-resourcegroups 1.11.602
+    com.amazonaws/aws-java-sdk-acmpca 1.11.602
+    com.amazonaws/aws-java-sdk-ec2 1.11.602
+    com.amazonaws/aws-java-sdk-secretsmanager 1.11.602
+    com.amazonaws/aws-java-sdk-kinesisanalyticsv2 1.11.602
+    com.amazonaws/aws-java-sdk-transfer 1.11.602
+    com.amazonaws/aws-java-sdk-personalizeevents 1.11.602
+    com.amazonaws/aws-java-sdk-codebuild 1.11.602
+    com.amazonaws/aws-java-sdk-ram 1.11.602
+    com.amazonaws/aws-java-sdk-securityhub 1.11.602
+    com.amazonaws/aws-java-sdk-snowball 1.11.602
+    com.amazonaws/aws-java-sdk-pinpointemail 1.11.602
+    com.amazonaws/aws-java-sdk-stepfunctions 1.11.602
+    com.amazonaws/aws-java-sdk-gamelift 1.11.602
+    com.amazonaws/aws-java-sdk-elasticbeanstalk 1.11.602
+    com.amazonaws/aws-java-sdk-mediaconnect 1.11.602
+    com.amazonaws/aws-java-sdk-workmail 1.11.602
+    com.amazonaws/aws-java-sdk-mediastoredata 1.11.602
+    com.amazonaws/aws-java-sdk-opsworkscm 1.11.602
+    com.amazonaws/aws-java-sdk-eventbridge 1.11.602
+      com.amazonaws/jmespath-java 1.11.602
+    com.amazonaws/aws-java-sdk-rekognition 1.11.602
+    com.amazonaws/aws-java-sdk-mediastore 1.11.602
+    com.amazonaws/aws-java-sdk-iot 1.11.602
+    com.amazonaws/aws-java-sdk-lex 1.11.602
+    com.amazonaws/aws-java-sdk-comprehend 1.11.602
+    com.amazonaws/aws-java-sdk-dlm 1.11.602
+    com.amazonaws/aws-java-sdk-cognitosync 1.11.602
+    com.amazonaws/aws-java-sdk-textract 1.11.602
+    com.amazonaws/aws-java-sdk-polly 1.11.602
+    com.amazonaws/aws-java-sdk-robomaker 1.11.602
+    com.amazonaws/aws-java-sdk-backup 1.11.602
+    com.amazonaws/aws-java-sdk-core 1.11.602
+      com.fasterxml.jackson.core/jackson-databind 2.6.7.2
+        com.fasterxml.jackson.core/jackson-annotations 2.6.0
+      com.fasterxml.jackson.dataformat/jackson-dataformat-cbor 2.6.7
+      software.amazon.ion/ion-java 1.0.2
+      org.apache.httpcomponents/httpclient 4.5.9
+        commons-codec/commons-codec 1.11
+        org.apache.httpcomponents/httpcore 4.4.11
+        commons-logging/commons-logging 1.2
+    com.amazonaws/aws-java-sdk-kinesis 1.11.602
+    com.amazonaws/aws-java-sdk-mq 1.11.602
+    com.amazonaws/aws-java-sdk-mediatailor 1.11.602
+    com.amazonaws/aws-java-sdk-globalaccelerator 1.11.602
+    com.amazonaws/aws-java-sdk-cloudtrail 1.11.602
+    com.amazonaws/aws-java-sdk-simpledb 1.11.602
+    com.amazonaws/aws-java-sdk-lambda 1.11.602
+    com.amazonaws/aws-java-sdk-ioteventsdata 1.11.602
+    com.amazonaws/aws-java-sdk-xray 1.11.602
+    com.amazonaws/aws-java-sdk-cloudwatch 1.11.602
+    com.amazonaws/aws-java-sdk-dax 1.11.602
+    com.amazonaws/aws-java-sdk-serverlessapplicationrepository 1.11.602
+    com.amazonaws/aws-java-sdk-connect 1.11.602
+    com.amazonaws/aws-java-sdk-machinelearning 1.11.602
+    com.amazonaws/aws-java-sdk-ecs 1.11.602
+    com.amazonaws/aws-java-sdk-health 1.11.602
+    com.amazonaws/aws-java-sdk-servicecatalog 1.11.602
+    com.amazonaws/aws-java-sdk-importexport 1.11.602
+    com.amazonaws/aws-java-sdk-apigatewaymanagementapi 1.11.602
+    com.amazonaws/aws-java-sdk-route53 1.11.602
+    com.amazonaws/aws-java-sdk-shield 1.11.602
+    com.amazonaws/aws-java-sdk-mobile 1.11.602
+    com.amazonaws/aws-java-sdk-workspaces 1.11.602
+    com.amazonaws/aws-java-sdk-guardduty 1.11.602
+    com.amazonaws/aws-java-sdk-appstream 1.11.602
+    com.amazonaws/aws-java-sdk-devicefarm 1.11.602
+    com.amazonaws/aws-java-sdk-eks 1.11.602
+    com.amazonaws/aws-java-sdk-acm 1.11.602
+    com.amazonaws/aws-java-sdk-budgets 1.11.602
+    com.amazonaws/aws-java-sdk-mediapackagevod 1.11.602
+    com.amazonaws/aws-java-sdk-servicediscovery 1.11.602
+    com.amazonaws/aws-java-sdk-personalizeruntime 1.11.602
+    com.amazonaws/aws-java-sdk-elasticloadbalancing 1.11.602
+    com.amazonaws/aws-java-sdk-cognitoidp 1.11.602
+    com.amazonaws/aws-java-sdk-amplify 1.11.602
+    com.amazonaws/aws-java-sdk-managedblockchain 1.11.602
+    com.amazonaws/aws-java-sdk-redshift 1.11.602
+    com.amazonaws/aws-java-sdk-servermigration 1.11.602
+    com.amazonaws/aws-java-sdk-dynamodb 1.11.602
+    com.amazonaws/aws-java-sdk-appmesh 1.11.602
+    com.amazonaws/aws-java-sdk-cloudwatchmetrics 1.11.602
+    com.amazonaws/aws-java-sdk-iot1clickdevices 1.11.602
+    com.amazonaws/aws-java-sdk-kinesisvideo 1.11.602
+      io.netty/netty-handler 4.1.17.Final
+        io.netty/netty-buffer 4.1.17.Final
+          io.netty/netty-common 4.1.17.Final
+        io.netty/netty-transport 4.1.17.Final
+          io.netty/netty-resolver 4.1.17.Final
+      io.netty/netty-codec-http 4.1.17.Final
+        io.netty/netty-codec 4.1.17.Final
+    com.amazonaws/aws-java-sdk-servicequotas 1.11.602
+    com.amazonaws/aws-java-sdk-codedeploy 1.11.602
+    com.amazonaws/aws-java-sdk-pricing 1.11.602
+    com.amazonaws/aws-java-sdk-logs 1.11.602
+    com.amazonaws/aws-java-sdk-ec2instanceconnect 1.11.602
+    com.amazonaws/aws-java-sdk-applicationautoscaling 1.11.602
+    com.amazonaws/aws-java-sdk-marketplacecommerceanalytics 1.11.602
+    com.amazonaws/aws-java-sdk-route53resolver 1.11.602
+    com.amazonaws/aws-java-sdk-cognitoidentity 1.11.602
+    com.amazonaws/aws-java-sdk-elasticloadbalancingv2 1.11.602
+    com.amazonaws/aws-java-sdk-api-gateway 1.11.602
+    com.amazonaws/aws-java-sdk-kms 1.11.602
+    com.amazonaws/aws-java-sdk-workdocs 1.11.602
+    com.amazonaws/aws-java-sdk-ssm 1.11.602
+    com.amazonaws/aws-java-sdk-elasticache 1.11.602
+    com.amazonaws/aws-java-sdk-personalize 1.11.602
+    com.amazonaws/aws-java-sdk-s3 1.11.602
+    com.amazonaws/aws-java-sdk-kafka 1.11.602
+  com.amazonaws/dynamodb-streams-kinesis-adapter 1.2.1
+  org.clojure/algo.generic 0.1.2
+  robert/hooke 1.3.0
+  com.taoensso/nippy 2.12.2
+    org.tukaani/xz 1.5
+    com.taoensso/encore 2.68.0
+      com.taoensso/truss 1.3.4
+    net.jpountz.lz4/lz4 1.3
+    org.iq80.snappy/snappy 0.4
+javax.servlet/javax.servlet-api 4.0.1
+codox/codox https://github.com/cljdoc/codox e0cd269
+  org.clojure/tools.namespace 0.2.11
+---------------------------------------------------------------------------
+Going to write analysis result to: /tmp/cljdoc/analysis-out/cljdoc-edn/amazonica/amazonica/0.3.146/cljdoc.edn
+Analyzing amazonica clj
+exit-code 0 ---------------------------------------------------------------
+stdout --------------------------------------------------------------------
+Args:
+  - namespaces: "nil"
+  - jar-contents-path: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-amazonica-0.3.1467961454267569131999/contents"
+  - platf: "clj"
+  - file: "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/amazonica4333465699988758317.edn"
+Analysing sources for platform "clj"
+Clojure version 1.9.0
+ClojureScript version 1.10.520
+Codox opts: {:language :clojure, :root-path "/private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T", :source-paths ["/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-amazonica-0.3.1467961454267569131999/contents"], :namespaces :all, :exception-handler #object[cljdoc.analysis.impl$codox_config$ex_handler__980 0x5a034157 "cljdoc.analysis.impl$codox_config$ex_handler__980@5a034157"], :metadata {}, :writer clojure.core/identity, :exclude-vars #"^(map)?->\p{Upper}"}
+Writing /var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/amazonica4333465699988758317.edn
+
+---------------------------------------------------------------------------
+Analysis succeeded!
+
+err:        32.77 real        61.44 user         2.85 sys
+

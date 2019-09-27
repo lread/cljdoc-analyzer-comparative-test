@@ -1,0 +1,385 @@
+found results/old/analysis-out/cljdoc-edn/metosin/muuntaja/0.6.3/cljdoc.edn
+found results/new/analysis-out/cljdoc-edn/metosin/muuntaja/0.6.3/cljdoc.edn
+[1;31m{[0m[1;33m:analysis[0m [1;31m{[0m[1;35m"clj"[0m [1;31m[[0m[1;31m{[0m[1;33m:name[0m muuntaja.core,
+[1;33m                    :publics[0m [1;31m[[0m[30;42m+{:file "muuntaja/core.clj", :line 41, :name Adapter, :type :var}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"Set of recognised charsets by the current JVM\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m99[0m,
+[1;33m                               :name[0m available-charsets,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Set of charsets that the Muuntaja instance can handle\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m59[0m,
+[1;33m                               :name[0m charsets,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mmuuntaja-or-options[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Creates a new Muuntaja intance from a given prototype:\n- existing Muuntaja (no-op)\n- options-map (new created)\n- nothing (new created with default-options)"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m372[0m,
+[1;33m                               :name[0m create,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mformat data[1;31m][0m [1;31m[[0mm format data[1;31m][0m [1;31m[[0mm format data charset[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Decode data into the given format. Returns Clojure Data or throws.\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m529[0m,
+[1;33m                               :name[0m decode,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mresponse[1;31m][0m [1;31m[[0mm response[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Decode response :body using the format defined by \"Content-Type\" header.\nReturns Clojure Data or throws."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m540[0m,
+[1;33m                               :name[0m decode-response-body,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Set of formats that the Muuntaja instance can decode\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m47[0m,
+[1;33m                               :name[0m decodes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Default charset of the Muuntaja instance\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m63[0m,
+[1;33m                               :name[0m default-charset,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Default format of the Muuntaja instance\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m67[0m,
+[1;33m                               :name[0m default-format,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m103[0m,
+[1;33m                               :name[0m default-options,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mformat data[1;31m][0m [1;31m[[0mm format data[1;31m][0m [1;31m[[0mm format data charset[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Encode data into the given format. Returns InputStream or throws.\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m518[0m,
+[1;33m                               :name[0m encode,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_ response[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m96[0m,
+[1;33m                               :name[0m encode-collections,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Set of formats that the Muuntaja instance can encode\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m51[0m,
+[1;33m                               :name[0m encodes,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extracts accept-charset from ring-request.\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m91[0m,
+[1;33m                               :name[0m extract-accept-charset-ring,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extracts accept from ring-request.\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m86[0m,
+[1;33m                               :name[0m extract-accept-ring,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Extracts content-type from ring-request.\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m79[0m,
+[1;33m                               :name[0m extract-content-type-ring,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[30;42m                              +{:file "muuntaja/core.clj",
+                                :line 35,
+                                :name FormatAndCharset,
+                                :type :var}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Set of formats that the Muuntaja instance can decode or encode\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m71[0m,
+[1;33m                               :name[0m formats,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m197[0m,
+[1;33m                               :name[0m get-request-format-and-charset,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mrequest[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m200[0m,
+[1;33m                               :name[0m get-response-format-and-charset,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions format[1;31m][0m [1;31m[[0moptions format name[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m569[0m,
+[1;33m                               :name[0m install,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:doc[0m [1;35m"the default instance\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m508[0m,
+[1;33m                               :name[0m instance,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Map of format->regexp that the Muuntaja instance knows\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m55[0m,
+[1;33m                               :name[0m matchers,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m15[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis[1;31m][0m[1;31m)[0m, [1;33m:name[0m adapters, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis format[1;31m][0m[1;31m)[0m, [1;33m:name[0m decoder, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis format[1;31m][0m[1;31m)[0m, [1;33m:name[0m encoder, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis[1;31m][0m[1;31m)[0m, [1;33m:name[0m options, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Muuntaja,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m32[0m,
+[1;33m                               :name[0m muuntaja?,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m21[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m format-request,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis request response[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m format-response,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m negotiate-and-format-request,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m negotiate-request-response,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m request-format,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                                         {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis request[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m response-format,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m MuuntajaHttp,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions formats[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m555[0m,
+[1;33m                               :name[0m select-formats,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mresponse content-type[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m207[0m,
+[1;33m                               :name[0m set-response-content-type,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mx[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m580[0m,
+[1;33m                               :name[0m slurp,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions f[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/core.clj"[0m,
+[1;33m                               :line[0m [36m552[0m,
+[1;33m                               :name[0m transform-formats,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.format.core,
+[1;33m                    :publics[0m [1;31m[[0m[1;31m{[0m[1;33m:file[0m [1;35m"muuntaja/format/core.clj"[0m,
+[1;33m                               :line[0m [36m3[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis data charset[1;31m][0m[1;31m)[0m, [1;33m:name[0m decode, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m Decode,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/format/core.clj"[0m,
+[1;33m                               :line[0m [36m6[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis data charset[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m encode-to-bytes,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m EncodeToBytes,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/format/core.clj"[0m,
+[1;33m                               :line[0m [36m9[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis data charset[1;31m][0m[1;31m)[0m,
+[1;33m                                          :name[0m encode-to-output-stream,
+[1;33m                                          :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m EncodeToOutputStream,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m
+[30;42m                              +{:file "muuntaja/format/core.clj",
+                                :line 12,
+                                :name Format,
+                                :type :var}[0m[1;31m][0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.format.edn,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/edn.clj"[0m,
+[1;33m                               :line[0m [36m7[0m,
+[1;33m                               :name[0m decoder,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m_[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/edn.clj"[0m,
+[1;33m                               :line[0m [36m14[0m,
+[1;33m                               :name[0m encoder,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/format/edn.clj"[0m, [1;33m:line[0m [36m28[0m, [1;33m:name[0m format, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.format.json,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/json.clj"[0m,
+[1;33m                               :line[0m [36m28[0m,
+[1;33m                               :name[0m decoder,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0moptions[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/json.clj"[0m,
+[1;33m                               :line[0m [36m37[0m,
+[1;33m                               :name[0m encoder,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/format/json.clj"[0m, [1;33m:line[0m [36m52[0m, [1;33m:name[0m format, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0m[1;31m{[0m[1;33m:as[0m options, [1;33m:keys[0m [1;31m[[0mmapper[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/json.clj"[0m,
+[1;33m                               :line[0m [36m11[0m,
+[1;33m                               :name[0m object-mapper!,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.format.transit,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mtype options[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/transit.clj"[0m,
+[1;33m                               :line[0m [36m6[0m,
+[1;33m                               :name[0m decoder,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mtype [1;31m{[0m[1;33m:as[0m options, [1;33m:keys[0m [1;31m[[0mverbose[1;31m][0m[1;31m}[0m[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/format/transit.clj"[0m,
+[1;33m                               :line[0m [36m14[0m,
+[1;33m                               :name[0m encoder,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/format/transit.clj"[0m,
+[1;33m                               :line[0m [36m30[0m,
+[1;33m                               :name[0m json-format,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:file[0m [1;35m"muuntaja/format/transit.clj"[0m,
+[1;33m                               :line[0m [36m36[0m,
+[1;33m                               :name[0m msgpack-format,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.interceptor,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mon-exception[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Interceptor that catches exceptions of type `:muuntaja/decode`\nand invokes a 3-arity callback [^Exception e format request] which\nreturns a response."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/interceptor.clj"[0m,
+[1;33m                               :line[0m [36m11[0m,
+[1;33m                               :name[0m exception-interceptor,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mprototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Interceptor that negotiates a request body based on accept, accept-charset\nand content-type headers and decodes the body with an attached Muuntaja\ninstance into `:body-params`. Encodes also the response body with the same\nMuuntaja instance based on the negotiation information or override information\nprovided by the handler.\n\nTakes a pre-configured Muuntaja or options maps an argument.\nSee https://github.com/metosin/muuntaja for all options and defaults."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/interceptor.clj"[0m,
+[1;33m                               :line[0m [36m44[0m,
+[1;33m                               :name[0m format-interceptor,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mprototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Interceptor that negotiates a request body based on accept, accept-charset\nand content-type headers with an attached Muuntaja instance. Injects negotiation\nresults into request for `format-request` interceptor to use.\n\nTakes a pre-configured Muuntaja or options maps an argument.\nSee https://github.com/metosin/muuntaja for all options and defaults."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/interceptor.clj"[0m,
+[1;33m                               :line[0m [36m66[0m,
+[1;33m                               :name[0m format-negotiate-interceptor,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mprototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Interceptor that decodes the request body with an attached Muuntaja\ninstance into `:body-params` based on the negotiation information provided\nby `format-negotiate` interceptor.\n\nTakes a pre-configured Muuntaja or options maps an argument.\nSee https://github.com/metosin/muuntaja for all options and defaults."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/interceptor.clj"[0m,
+[1;33m                               :line[0m [36m82[0m,
+[1;33m                               :name[0m format-request-interceptor,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m [1;31m[[0mprototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Interceptor that encodes also the response body with the attached\nMuuntaja instance, based on request negotiation information provided by\n`format-negotiate` interceptor or override information provided by the handler.\n\nTakes a pre-configured Muuntaja or options maps an argument.\nSee https://github.com/metosin/muuntaja for all options and defaults."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/interceptor.clj"[0m,
+[1;33m                               :line[0m [36m98[0m,
+[1;33m                               :name[0m format-response-interceptor,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Interceptor that merges request `:body-params` into `:params`.\n"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/interceptor.clj"[0m,
+[1;33m                               :line[0m [36m27[0m,
+[1;33m                               :name[0m params-interceptor,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.middleware,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler on-exception[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that catches exceptions of type `:muuntaja/decode`\nand invokes a 3-arity callback [^Exception e format request] which\nreturns a response. Support async-ring."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/middleware.clj"[0m,
+[1;33m                               :line[0m [36m17[0m,
+[1;33m                               :name[0m wrap-exception,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler prototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that negotiates a request body based on accept, accept-charset\nand content-type headers and decodes the body with an attached Muuntaja\ninstance into `:body-params`. Encodes also the response body with the same\nMuuntaja instance based on the negotiation information or override information\nprovided by the handler.\n\nTakes a pre-configured Muuntaja or options maps as second argument.\nSee https://github.com/metosin/muuntaja for all options and defaults.\nSupports async-ring."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/middleware.clj"[0m,
+[1;33m                               :line[0m [36m56[0m,
+[1;33m                               :name[0m wrap-format,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler prototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that negotiates a request body based on accept, accept-charset\nand content-type headers with an attached Muuntaja instance. Injects negotiation\nresults into request for `wrap-format-request` to use.\n\nTakes a pre-configured Muuntaja or options maps as second argument.\nSee https://github.com/metosin/muuntaja for all options and defaults.\nSupports async-ring."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/middleware.clj"[0m,
+[1;33m                               :line[0m [36m82[0m,
+[1;33m                               :name[0m wrap-format-negotiate,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler prototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that decodes the request body with an attached Muuntaja\ninstance into `:body-params` based on the negotiation information provided\nby `wrap-format-negotiate`.\n\nTakes a pre-configured Muuntaja or options maps as second argument.\nSee https://github.com/metosin/muuntaja for all options and defaults.\nSupports async-ring."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/middleware.clj"[0m,
+[1;33m                               :line[0m [36m100[0m,
+[1;33m                               :name[0m wrap-format-request,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m [1;31m[[0mhandler prototype[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that encodes also the response body with the attached\nMuuntaja instance, based on request negotiation information provided by\n`wrap-format-negotiate` or override information provided by the handler.\n\nTakes a pre-configured Muuntaja or options maps as second argument.\nSee https://github.com/metosin/muuntaja for all options and defaults.\nSupports async-ring."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/middleware.clj"[0m,
+[1;33m                               :line[0m [36m118[0m,
+[1;33m                               :name[0m wrap-format-response,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mhandler[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Middleware that merges request `:body-params` into `:params`.\nSupports async-ring."[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/middleware.clj"[0m,
+[1;33m                               :line[0m [36m37[0m,
+[1;33m                               :name[0m wrap-params,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.parse,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0msize f[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/parse.clj"[0m,
+[1;33m                               :line[0m [36m9[0m,
+[1;33m                               :name[0m fast-memoize,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0maccept-header[1;31m][0m[1;31m)[0m,
+[1;33m                               :doc[0m [1;35m"Parse Accept headers into a sorted sequence of content-types.\n\"application/json;level=1;q=0.4\"\n=> (\"application/json\"})"[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/parse.clj"[0m,
+[1;33m                               :line[0m [36m67[0m,
+[1;33m                               :name[0m parse-accept,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0ms[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/parse.clj"[0m,
+[1;33m                               :line[0m [36m92[0m,
+[1;33m                               :name[0m parse-accept-charset,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0ms[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/parse.clj"[0m,
+[1;33m                               :line[0m [36m34[0m,
+[1;33m                               :name[0m parse-content-type,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.protocols,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:file[0m [1;35m"muuntaja/protocols.clj"[0m,
+[1;33m                               :line[0m [36m48[0m,
+[1;33m                               :members[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mthis[1;31m][0m[1;31m)[0m, [1;33m:name[0m into-input-stream, [1;33m:type[0m [1;33m:var[0m[1;31m}[0m[1;31m)[0m,
+[1;33m                               :name[0m IntoInputStream,
+[1;33m                               :type[0m [1;33m:protocol[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m
+[1;31m                   {[0m[1;33m:name[0m muuntaja.util,
+[1;33m                    :publics[0m [1;31m([0m[1;31m{[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mm k1 k2 v[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/util.clj"[0m,
+[1;33m                               :line[0m [36m18[0m,
+[1;33m                               :name[0m assoc-assoc,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mbytes[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/util.clj"[0m,
+[1;33m                               :line[0m [36m4[0m,
+[1;33m                               :name[0m byte-stream,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mpred c[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/util.clj"[0m,
+[1;33m                               :line[0m [36m14[0m,
+[1;33m                               :name[0m some-value,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mformats format message[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/util.clj"[0m,
+[1;33m                               :line[0m [36m7[0m,
+[1;33m                               :name[0m throw!,
+[1;33m                               :type[0m [1;33m:var[0m[1;31m}[0m
+[1;31m                              {[0m[1;33m:arglists[0m [1;31m([0m[1;31m[[0mns & body[1;31m][0m[1;31m)[0m,
+[1;33m                               :file[0m [1;35m"muuntaja/util.clj"[0m,
+[1;33m                               :line[0m [36m21[0m,
+[1;33m                               :name[0m when-ns,
+[1;33m                               :type[0m [1;33m:macro[0m[1;31m}[0m[1;31m)[0m[1;31m}[0m[1;31m][0m[1;31m}[0m,
+[1;33m :artifact-id[0m [1;35m"muuntaja"[0m,
+[1;33m :group-id[0m [1;35m"metosin"[0m,
+[1;33m :pom-str[0m [1;35m"<?xml version=\"1.0\" encoding=\"UTF-8\"?><project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  <modelVersion>4.0.0</modelVersion>\n  <groupId>metosin</groupId>\n  <artifactId>muuntaja</artifactId>\n  <packaging>jar</packaging>\n  <version>0.6.3</version>\n  <name>muuntaja</name>\n  <description>Clojure library for format encoding, decoding and content-negotiation</description>\n  <url>https://github.com/metosin/muuntaja</url>\n  <licenses>\n    <license>\n      <name>Eclipse Public License</name>\n      <url>http://www.eclipse.org/legal/epl-v10.html</url>\n    </license>\n  </licenses>\n  <scm/>\n  <build>\n    <sourceDirectory>src</sourceDirectory>\n    <testSourceDirectory>test</testSourceDirectory>\n    <resources>\n      <resource>\n        <directory>resources</directory>\n      </resource>\n    </resources>\n    <testResources>\n      <testResource>\n        <directory>resources</directory>\n      </testResource>\n    </testResources>\n    <directory>target</directory>\n    <outputDirectory>target/classes</outputDirectory>\n    <plugins/>\n  </build>\n  <repositories>\n    <repository>\n      <id>central</id>\n      <url>https://repo1.maven.org/maven2/</url>\n      <snapshots>\n        <enabled>false</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n    <repository>\n      <id>clojars</id>\n      <url>https://repo.clojars.org/</url>\n      <snapshots>\n        <enabled>true</enabled>\n      </snapshots>\n      <releases>\n        <enabled>true</enabled>\n      </releases>\n    </repository>\n  </repositories>\n  <dependencyManagement>\n    <dependencies>\n      <dependency>\n        <groupId>metosin</groupId>\n        <artifactId>muuntaja</artifactId>\n        <version>0.6.3</version>\n      </dependency>\n      <dependency>\n        <groupId>metosin</groupId>\n        <artifactId>jsonista</artifactId>\n        <version>0.2.2</version>\n      </dependency>\n      <dependency>\n        <groupId>com.cognitect</groupId>\n        <artifactId>transit-clj</artifactId>\n        <version>0.8.313</version>\n      </dependency>\n      <dependency>\n        <groupId>cheshire</groupId>\n        <artifactId>cheshire</artifactId>\n        <version>5.8.1</version>\n      </dependency>\n      <dependency>\n        <groupId>circleci</groupId>\n        <artifactId>clj-yaml</artifactId>\n        <version>0.5.6</version>\n      </dependency>\n      <dependency>\n        <groupId>clojure-msgpack</groupId>\n        <artifactId>clojure-msgpack</artifactId>\n        <version>1.2.1</version>\n        <exclusions>\n          <exclusion>\n            <artifactId>clojure</artifactId>\n            <groupId>org.clojure</groupId>\n          </exclusion>\n        </exclusions>\n      </dependency>\n    </dependencies>\n  </dependencyManagement>\n  <dependencies>\n    <dependency>\n      <groupId>metosin</groupId>\n      <artifactId>jsonista</artifactId>\n    </dependency>\n    <dependency>\n      <groupId>com.cognitect</groupId>\n      <artifactId>transit-clj</artifactId>\n    </dependency>\n  </dependencies>\n</project>\n\n<!-- This file was autogenerated by Leiningen.\n  Please do not edit it directly; instead edit project.clj and regenerate it.\n  It should not be considered canonical data. For more information see\n  https://github.com/technomancy/leiningen -->\n"[0m,
+[1;33m :version[0m [1;35m"0.6.3"[0m[1;31m}[0m

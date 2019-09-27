@@ -1,0 +1,120 @@
+comparative test for cljdoc-analyzer
+--shelling--->: ("rm" "-rf" "cljdoc")
+exit: 0
+--shelling--->: ("rm" "-rf" "cljdoc-analyzer")
+exit: 0
+--shelling--->: ("rm" "-rf" "rewrite-cljs-playground")
+exit: 0
+--shelling--->: ("git" "clone" "git@github.com:cljdoc/cljdoc.git")
+exit: 0
+err: Cloning into 'cljdoc'...
+[KUpdating files:  82% (160/195)[KUpdating files:  83% (162/195)[KUpdating files:  84% (164/195)[KUpdating files:  85% (166/195)[KUpdating files:  86% (168/195)[KUpdating files:  87% (170/195)[KUpdating files:  88% (172/195)[KUpdating files:  89% (174/195)[KUpdating files:  90% (176/195)[KUpdating files:  91% (178/195)[KUpdating files:  91% (179/195)[KUpdating files:  92% (180/195)[KUpdating files:  93% (182/195)[KUpdating files:  94% (184/195)[KUpdating files:  95% (186/195)[KUpdating files:  96% (188/195)[KUpdating files:  97% (190/195)[KUpdating files:  98% (192/195)[KUpdating files:  99% (194/195)[KUpdating files: 100% (195/195)[KUpdating files: 100% (195/195), done.
+
+--shelling--->: ("git" "clone" "git@github.com:lread/cljdoc-analyzer.git")
+exit: 0
+err: Cloning into 'cljdoc-analyzer'...
+[KUpdating files:  17% (11/62)[KUpdating files:  19% (12/62)[KUpdating files:  20% (13/62)[KUpdating files:  22% (14/62)[KUpdating files:  24% (15/62)[KUpdating files:  25% (16/62)[KUpdating files:  27% (17/62)[KUpdating files:  29% (18/62)[KUpdating files:  30% (19/62)[KUpdating files:  32% (20/62)[KUpdating files:  33% (21/62)[KUpdating files:  35% (22/62)[KUpdating files:  37% (23/62)[KUpdating files:  38% (24/62)[KUpdating files:  40% (25/62)[KUpdating files:  41% (26/62)[KUpdating files:  43% (27/62)[KUpdating files:  45% (28/62)[KUpdating files:  46% (29/62)[KUpdating files:  48% (30/62)[KUpdating files:  50% (31/62)[KUpdating files:  51% (32/62)[KUpdating files:  53% (33/62)[KUpdating files:  54% (34/62)[KUpdating files:  56% (35/62)[KUpdating files:  58% (36/62)[KUpdating files:  59% (37/62)[KUpdating files:  61% (38/62)[KUpdating files:  62% (39/62)[KUpdating files:  64% (40/62)[KUpdating files:  66% (41/62)[KUpdating files:  67% (42/62)[KUpdating files:  69% (43/62)[KUpdating files:  70% (44/62)[KUpdating files:  72% (45/62)[KUpdating files:  74% (46/62)[KUpdating files:  75% (47/62)[KUpdating files:  77% (48/62)[KUpdating files:  79% (49/62)[KUpdating files:  80% (50/62)[KUpdating files:  82% (51/62)[KUpdating files:  83% (52/62)[KUpdating files:  85% (53/62)[KUpdating files:  87% (54/62)[KUpdating files:  88% (55/62)[KUpdating files:  90% (56/62)[KUpdating files:  91% (57/62)[KUpdating files:  93% (58/62)[KUpdating files:  95% (59/62)[KUpdating files:  96% (60/62)[KUpdating files:  98% (61/62)[KUpdating files: 100% (62/62)[KUpdating files: 100% (62/62), done.
+
+--shelling--->: ("git" "clone" "git@github.com:lread/rewrite-cljs-playground.git")
+exit: 0
+err: Cloning into 'rewrite-cljs-playground'...
+
+--shelling--->: ("git" "reset" "--hard" "7f3985e139905e729803e2d22dc9491d5907e92c" :dir "cljdoc")
+exit: 0
+out: HEAD is now at 7f3985e for-library-authors: info about README, CHANGELOG
+
+--shelling--->: ("git" "reset" "--hard" "f69a43b33c9727d31a066fb86564249b08d6da7a" :dir "cljdoc-analyzer")
+exit: 0
+out: HEAD is now at f69a43b Allow for un-normalized projects
+
+--shelling--->: ("git" "reset" "--hard" "e94dc733749dcd2bf0beaf625130eca51eb6aba3" :dir "rewrite-cljs-playground")
+exit: 0
+out: HEAD is now at e94dc73 Make note of meander's versioning scheme in design docs
+
+--shelling--->: ("mvn" "install" :dir "rewrite-cljs-playground")
+exit: 0
+out: [INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< lread:rewrite-cljs-playground >--------------------
+[INFO] Building rewrite-cljs-playground 1.0.0-alpha
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rewrite-cljs-playground ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 53 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rewrite-cljs-playground ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rewrite-cljs-playground ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/lee/other-proj/cljdoc-analyzer-comparative-test/rewrite-cljs-playground/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rewrite-cljs-playground ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ rewrite-cljs-playground ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ rewrite-cljs-playground ---
+[INFO] Building jar: /Users/lee/other-proj/cljdoc-analyzer-comparative-test/rewrite-cljs-playground/target/rewrite-cljs-playground-1.0.0-alpha.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ rewrite-cljs-playground ---
+[INFO] Installing /Users/lee/other-proj/cljdoc-analyzer-comparative-test/rewrite-cljs-playground/target/rewrite-cljs-playground-1.0.0-alpha.jar to /Users/lee/.m2/repository/lread/rewrite-cljs-playground/1.0.0-alpha/rewrite-cljs-playground-1.0.0-alpha.jar
+[INFO] Installing /Users/lee/other-proj/cljdoc-analyzer-comparative-test/rewrite-cljs-playground/pom.xml to /Users/lee/.m2/repository/lread/rewrite-cljs-playground/1.0.0-alpha/rewrite-cljs-playground-1.0.0-alpha.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.558 s
+[INFO] Finished at: 2019-09-27T12:56:40-04:00
+[INFO] ------------------------------------------------------------------------
+
+--shelling--->: ("rm" "-rf" "/tmp/cljdoc")
+exit: 0
+--shelling--->: ("rm" "-rf" "results")
+exit: 0
+--shelling--->: ("mkdir" "results")
+exit: 0
+old-analyze {:project "amazonica", :version "0.3.146", :jarpath "http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.jar", :pompath "http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.pom"}
+old-analyze {:project "bidi", :version "2.1.3", :jarpath "http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.jar", :pompath "http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.pom"}
+old-analyze {:project "iced-nrepl", :version "0.2.5", :jarpath "http://repo.clojars.org/iced-nrepl/iced-nrepl/0.2.5/iced-nrepl-0.2.5.jar", :pompath "http://repo.clojars.org/iced-nrepl/iced-nrepl/0.2.5/iced-nrepl-0.2.5.pom"}
+old-analyze {:project "io.aviso/pretty", :version "0.1.29", :jarpath "http://repo.clojars.org/io/aviso/pretty/0.1.29/pretty-0.1.29.jar", :pompath "http://repo.clojars.org/io/aviso/pretty/0.1.29/pretty-0.1.29.pom"}
+old-analyze {:project "lilactown/hx", :version "0.5.2", :jarpath "http://repo.clojars.org/lilactown/hx/0.5.2/hx-0.5.2.jar", :pompath "http://repo.clojars.org/lilactown/hx/0.5.2/hx-0.5.2.pom"}
+old-analyze {:project "lread/rewrite-cljs-playground", :version "1.0.0-alpha", :jarpath "/Users/lee/.m2/repository/lread/rewrite-cljs-playground/1.0.0-alpha/rewrite-cljs-playground-1.0.0-alpha.jar", :pompath "/Users/lee/.m2/repository/lread/rewrite-cljs-playground/1.0.0-alpha/rewrite-cljs-playground-1.0.0-alpha.pom"}
+old-analyze {:project "manifold", :version "0.1.8", :jarpath "http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.jar", :pompath "http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.pom"}
+old-analyze {:project "metosin/compojure-api", :version "2.0.0-alpha27", :jarpath "http://repo.clojars.org/metosin/compojure-api/2.0.0-alpha27/compojure-api-2.0.0-alpha27.jar", :pompath "http://repo.clojars.org/metosin/compojure-api/2.0.0-alpha27/compojure-api-2.0.0-alpha27.pom"}
+old-analyze {:project "metosin/muuntaja", :version "0.6.3", :jarpath "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.jar", :pompath "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.pom"}
+old-analyze {:project "metosin/reitit", :version "0.3.9", :jarpath "http://repo.clojars.org/metosin/reitit/0.3.9/reitit-0.3.9.jar", :pompath "http://repo.clojars.org/metosin/reitit/0.3.9/reitit-0.3.9.pom"}
+old-analyze {:project "orchestra", :version "2018.11.07-1", :jarpath "http://repo.clojars.org/orchestra/orchestra/2018.11.07-1/orchestra-2018.11.07-1.jar", :pompath "http://repo.clojars.org/orchestra/orchestra/2018.11.07-1/orchestra-2018.11.07-1.pom"}
+old-analyze {:project "semantic-csv", :version "0.2.1-alpha1", :jarpath "http://repo.clojars.org/semantic-csv/semantic-csv/0.2.1-alpha1/semantic-csv-0.2.1-alpha1.jar", :pompath "http://repo.clojars.org/semantic-csv/semantic-csv/0.2.1-alpha1/semantic-csv-0.2.1-alpha1.pom"}
+--shelling--->: ("cp" "-r" "/tmp/cljdoc" "results/old")
+exit: 0
+--shelling--->: ("rm" "-rf" "/tmp/cljdoc")
+exit: 0
+new-analyze {:project "amazonica", :version "0.3.146", :jarpath "http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.jar", :pompath "http://repo.clojars.org/amazonica/amazonica/0.3.146/amazonica-0.3.146.pom"}
+new-analyze {:project "bidi", :version "2.1.3", :jarpath "http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.jar", :pompath "http://repo.clojars.org/bidi/bidi/2.1.3/bidi-2.1.3.pom"}
+new-analyze {:project "iced-nrepl", :version "0.2.5", :jarpath "http://repo.clojars.org/iced-nrepl/iced-nrepl/0.2.5/iced-nrepl-0.2.5.jar", :pompath "http://repo.clojars.org/iced-nrepl/iced-nrepl/0.2.5/iced-nrepl-0.2.5.pom"}
+new-analyze {:project "io.aviso/pretty", :version "0.1.29", :jarpath "http://repo.clojars.org/io/aviso/pretty/0.1.29/pretty-0.1.29.jar", :pompath "http://repo.clojars.org/io/aviso/pretty/0.1.29/pretty-0.1.29.pom"}
+new-analyze {:project "lilactown/hx", :version "0.5.2", :jarpath "http://repo.clojars.org/lilactown/hx/0.5.2/hx-0.5.2.jar", :pompath "http://repo.clojars.org/lilactown/hx/0.5.2/hx-0.5.2.pom"}
+new-analyze {:project "lread/rewrite-cljs-playground", :version "1.0.0-alpha", :jarpath "/Users/lee/.m2/repository/lread/rewrite-cljs-playground/1.0.0-alpha/rewrite-cljs-playground-1.0.0-alpha.jar", :pompath "/Users/lee/.m2/repository/lread/rewrite-cljs-playground/1.0.0-alpha/rewrite-cljs-playground-1.0.0-alpha.pom"}
+new-analyze {:project "manifold", :version "0.1.8", :jarpath "http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.jar", :pompath "http://repo.clojars.org/manifold/manifold/0.1.8/manifold-0.1.8.pom"}
+new-analyze {:project "metosin/compojure-api", :version "2.0.0-alpha27", :jarpath "http://repo.clojars.org/metosin/compojure-api/2.0.0-alpha27/compojure-api-2.0.0-alpha27.jar", :pompath "http://repo.clojars.org/metosin/compojure-api/2.0.0-alpha27/compojure-api-2.0.0-alpha27.pom"}
+new-analyze {:project "metosin/muuntaja", :version "0.6.3", :jarpath "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.jar", :pompath "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.pom"}
+new-analyze {:project "metosin/reitit", :version "0.3.9", :jarpath "http://repo.clojars.org/metosin/reitit/0.3.9/reitit-0.3.9.jar", :pompath "http://repo.clojars.org/metosin/reitit/0.3.9/reitit-0.3.9.pom"}
+new-analyze {:project "orchestra", :version "2018.11.07-1", :jarpath "http://repo.clojars.org/orchestra/orchestra/2018.11.07-1/orchestra-2018.11.07-1.jar", :pompath "http://repo.clojars.org/orchestra/orchestra/2018.11.07-1/orchestra-2018.11.07-1.pom"}
+new-analyze {:project "semantic-csv", :version "0.2.1-alpha1", :jarpath "http://repo.clojars.org/semantic-csv/semantic-csv/0.2.1-alpha1/semantic-csv-0.2.1-alpha1.jar", :pompath "http://repo.clojars.org/semantic-csv/semantic-csv/0.2.1-alpha1/semantic-csv-0.2.1-alpha1.pom"}
+--shelling--->: ("cp" "-r" "/tmp/cljdoc" "results/new")
+exit: 0
+--diffing--> amazonica to results/amazonica.diff
+--diffing--> bidi to results/bidi.diff
+--diffing--> iced-nrepl to results/iced-nrepl.diff
+--diffing--> io.aviso/pretty to results/io.aviso_pretty.diff
+--diffing--> lilactown/hx to results/lilactown_hx.diff
+--diffing--> lread/rewrite-cljs-playground to results/lread_rewrite-cljs-playground.diff
+--diffing--> manifold to results/manifold.diff
+--diffing--> metosin/compojure-api to results/metosin_compojure-api.diff
+--diffing--> metosin/muuntaja to results/metosin_muuntaja.diff
+--diffing--> metosin/reitit to results/metosin_reitit.diff
+--diffing--> orchestra to results/orchestra.diff
+--diffing--> semantic-csv to results/semantic-csv.diff
+done

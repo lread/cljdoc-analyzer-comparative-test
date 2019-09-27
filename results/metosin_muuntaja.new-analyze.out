@@ -1,0 +1,90 @@
+--shelling--->: ("time" "clojure" "-m" "cljdoc-analyzer.cljdoc-main" "{:project \"metosin/muuntaja\", :version \"0.6.3\", :jarpath \"http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.jar\", :pompath \"http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.pom\"}" :dir "./cljdoc-analyzer")
+exit: 0
+out: 2019-09-27 13:03:53,238 INFO  cljdoc-analyzer.cljdoc-main - args:
+{:project "metosin/muuntaja",
+ :version "0.6.3",
+ :jarpath
+ "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.jar",
+ :pompath
+ "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.pom"}
+
+2019-09-27 13:03:53,265 INFO  cljdoc-analyzer.runner - args:
+{:project "metosin/muuntaja",
+ :version "0.6.3",
+ :jarpath
+ "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.jar",
+ :pompath
+ "http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.pom",
+ :extra-repos nil,
+ :namespaces :all,
+ :exclude-with [:no-doc :skip-wiki],
+ :output-filename
+ "/tmp/cljdoc/analysis-out/cljdoc-edn/metosin/muuntaja/0.6.3/cljdoc.edn"}
+
+2019-09-27 13:03:53,276 INFO  cljdoc-analyzer.runner - Downloading http://repo.clojars.org/metosin/muuntaja/0.6.3/muuntaja-0.6.3.jar
+2019-09-27 13:03:54,051 INFO  cljdoc-analyzer.runner - dependencies for analysis:
+org.clojure/clojure 1.10.1
+  org.clojure/core.specs.alpha 0.2.44
+  org.clojure/spec.alpha 0.2.176
+metosin/muuntaja /private/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-metosin-muuntaja-0.6.3326528519463855563/downloaded.jar
+  com.cognitect/transit-clj 0.8.313
+    com.cognitect/transit-java 0.8.337
+      commons-codec/commons-codec 1.10
+      org.msgpack/msgpack 0.6.12
+        com.googlecode.json-simple/json-simple 1.1.1
+        org.javassist/javassist 3.18.1-GA
+      javax.xml.bind/jaxb-api 2.3.0
+  metosin/jsonista 0.2.2
+    com.fasterxml.jackson.core/jackson-databind 2.9.7
+      com.fasterxml.jackson.core/jackson-core 2.9.7
+      com.fasterxml.jackson.core/jackson-annotations 2.9.0
+    org.ow2.asm/asm 5.1
+    virgil/virgil 0.1.6
+    com.fasterxml.jackson.datatype/jackson-datatype-jsr310 2.9.7
+org.clojure/clojurescript 1.10.520
+  org.clojure/data.json 0.2.6
+  org.clojure/google-closure-library 0.0-20170809-b9c14c6b
+    org.clojure/google-closure-library-third-party 0.0-20170809-b9c14c6b
+  org.mozilla/rhino 1.7R5
+  org.clojure/tools.reader 1.3.0
+  com.google.javascript/closure-compiler-unshaded v20180805
+    com.google.jsinterop/jsinterop-annotations 1.0.0
+    com.google.javascript/closure-compiler-externs v20180805
+    com.google.guava/guava 25.1-jre
+      com.google.errorprone/error_prone_annotations 2.1.3
+      org.codehaus.mojo/animal-sniffer-annotations 1.14
+      com.google.j2objc/j2objc-annotations 1.1
+      org.checkerframework/checker-qual 2.0.0
+      com.google.code.findbugs/jsr305 3.0.2
+    args4j/args4j 2.0.26
+    com.google.protobuf/protobuf-java 3.0.2
+    com.google.code.gson/gson 2.7
+cljdoc-analyzer/metagetta /Users/lee/other-proj/cljdoc-analyzer-comparative-test/cljdoc-analyzer/modules/metagetta
+  org.clojure/tools.namespace 0.2.11
+javax.servlet/javax.servlet-api 4.0.1
+
+2019-09-27 13:03:54,053 INFO  cljdoc-analyzer.runner - launching metagetta for: metosin/muuntaja languages: :auto-detect
+2019-09-27 13:03:58,049 INFO  cljdoc-analyzer.runner - metagetta results:
+exit-code 0
+stdout:
+ Args: {:namespaces :all,
+        :root-path
+        "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/cljdoc-metosin-muuntaja-0.6.3326528519463855563/contents",
+        :languages :auto-detect,
+        :output-filename
+        "/var/folders/8g/glv37m8n73gf4x0fqy5whqjc0000gn/T/metosin-muuntaja20649538412793031.edn",
+        :exclude-with [:no-doc :skip-wiki]}
+ Java version 1.8.0_222
+ Clojure version 1.10.1
+ ClojureScript version 1.10.520
+ Analyzing for clj
+ Excluding var muuntaja.protocols/->StreamableResponse
+ Excluding var muuntaja.format.core/->Format
+ Excluding var muuntaja.core/->FormatAndCharset
+ Excluding var muuntaja.core/->Adapter
+ Done
+2019-09-27 13:03:58,111 INFO  cljdoc-analyzer.runner - results file: /tmp/cljdoc/analysis-out/cljdoc-edn/metosin/muuntaja/0.6.3/cljdoc.edn
+2019-09-27 13:03:58,111 INFO  cljdoc-analyzer.runner - Analysis succeeded.
+
+err:         7.74 real        25.17 user         0.85 sys
+
