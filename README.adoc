@@ -14,7 +14,10 @@ https://github.com/lread/cljdoc-analyzer/blob/master/doc/design/01-migration-fro
 migration plan] for details on tests run and interpretation of their results.
 
 == Scripts
+
 The scripts are written in clojure proper and intentionally unpolished.
+
+WARNING: Scripts completely delete `/tmp/cljdoc`
 
 I initiated a run from the cloned root of this project, via:
 [source,shell]
