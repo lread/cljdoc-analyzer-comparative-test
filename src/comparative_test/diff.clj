@@ -87,11 +87,10 @@
       (throw (ex-info (str  "expected 1 match for result file " proj-specifier " " test-set " got: " (pr-str fs)) {})))
     (first fs)))
 
-
 (defn diff [proj-specifier]
   (try
-    (let [ea (load-edn (find-edn-file proj-specifier "old"))
-          eb (load-edn (find-edn-file proj-specifier "new"))]
+    (let [ea (load-edn (find-edn-file proj-specifier "/old/"))
+          eb (load-edn (find-edn-file proj-specifier "/new/"))]
 
       (if (= ea eb)
         (println "no differences found after compensations in old")
@@ -103,3 +102,14 @@
 (defn -main [proj-specifier]
   (diff proj-specifier)
   (System/exit 0))
+
+(comment
+  (ddiff/pretty-print (ddiff/diff {:alpha "one"} {:alpha "two"}))
+  (find-edn-file "manifold" "/old/")
+  ;; -#"^\#" +#"^\#"
+  (= #"^\#" #"^\#")
+  (= #"hello" #"hello")
+  (= (str #"hello") (str #"hello"))
+  (str #"hello")
+
+  )
