@@ -1,0 +1,46 @@
+= cljdoc-analyzer comparative tests
+
+== Background
+
+Before integrating the new https://github.com/lread/cljdoc-analyzer[cljdoc-analyzer] into cljdoc, I wanted to have some
+confidence that there were no breaking changes and/or regressions.
+
+This project is my scripts to, at the time of this writing (2019-09-27), compare analysis results of the
+https://github.com/cljdoc/cljdoc/tree/53824b1c02322a815d965a7136c2900d53d801bd/modules/analysis-runner[current cljdoc
+analysis runner] against analysis results of the new cljdoc-analyzer.
+
+See
+https://github.com/lread/cljdoc-analyzer/blob/master/doc/design/01-migration-from-analysis-runner.adoc#migration-plan[cljdoc-analyzer
+migration plan] for details on tests run and interpretation of their results.
+
+== Scripts
+The scripts are written in clojure proper and intentionally unpolished.
+
+I initiated a run from the cloned root of this project, via:
+[source,shell]
+----
+clojure -m comparative-test.test >& comparative-test.out
+----
+
+Analysis edn, output and diffs are saved to the current directory under the `results\` dir.
+
+== Verification
+
+I reviewed each generated `.diff` under `results/` manually.
+
+These files highlight changes with ANSI codes, so reviewing with cat in the terminal worked nicely.
+
+== Strategies
+
+Diff output is large and review is manual so I make use of a https://github.com/lread/deep-diff[modified
+lambdaisland/deep-diff] that uses background instead of foreground colors to highlight the diffs.
+
+Compensations, where possible, were applied to current cljdoc analysis runner output to get rid of diff noise.
+
+I used current cljdoc-analyzer deserializers to load analysis edn (code is the same for new and old).
+
+== Notes of interest
+
+* The cljdoc-analyzer will soon be migrated over the cljdoc org, I'll update links here accordingly when that happens.
+* I tried out babashka, very cool! But in the end, my script is big and slow and did not benefit from using babashka, so
+  I switched to clojure proper for a better IDE experience.
