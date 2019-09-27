@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps {lambdaisland/deep-diff {:mvn/version "0.0-47"}
+        cljdoc/cljdoc-analyzer {:git/url "git@github.com:lread/cljdoc-analyzer.git"
+                                :sha "f69a43b33c9727d31a066fb86564249b08d6da7a"}}}
